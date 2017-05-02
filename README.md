@@ -1,1 +1,1 @@
-# ionic.angular-1.4
+# ionic开发移动端App，兼容Android和IOS两个系统，适合前端进行移动端项目的开发，插件还是有些不足，但基本够用
