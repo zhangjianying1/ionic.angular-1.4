@@ -1,0 +1,25 @@
+<ion-view view-title="绑定手机">
+    <ion-content class="padding-20 bg-f4">
+        <form name="registerForm"  ng-submit="formSub()" novalidate>
+            <div class="register list">
+                <sendcode mobile="inputData.mobile" func="bindMobile"></sendcode>
+                <label class="item item-input input-code">
+                    <input type="tel" placeholder="输入六位的验证码" ng-model="inputData.testCode" required>
+                </label>
+                <dl class="attention-list">
+                    <dt>注意事项</dt>
+                    <dd>
+                        <em>1、</em>短信验证码每日受网络影响，会出现不同程度的延迟，
+                        请耐心等待
+                    </dd>
+                    <dd>
+                    <em>2、</em>如果1分钟后未收到短信，请查询手机号填写是否正确
+                    或重新提交</dd>
+                </dl>
+
+                <button type="submit" class="assertive-btn register-btn" ng-disabled="registerForm.$invalid">确认绑定</button>
+
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

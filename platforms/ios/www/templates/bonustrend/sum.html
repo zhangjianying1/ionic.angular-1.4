@@ -1,0 +1,64 @@
+<div class="bar bar-footer bonus-cycle-footer" >
+    <div class="show-btn" ng-click="showSum()">
+        <i class="icon-show-btn" ng-class="{'rotate180': bBtn}"></i><br/>
+        {{promptTitle}}
+    </div>
+    <div class="trend-column">
+        <ion-scroll direction="x" style="width: 100%;" scrollbar-x="flase" chart-height delegate-handle="sum" >
+            <div class="column-body">
+                <div class="">
+
+                    <div class=" column-left-first c-48D2A0" >
+                        出现次数
+                    </div>
+                    <div class="  column-left-first  bg-FCF2CB" >
+                        平均遗漏
+                    </div>
+                    <div class=" c-red column-left-first" >
+                        最大遗漏
+                    </div>
+                    <div class=" column-left-first  bg-DEEEFF" >
+                        最大连出
+                    </div>
+
+                </div>
+
+                <div class="column-left-other">
+
+                    <div class="bonus-row">
+                        <div class="bonus-col" ng-repeat="number in chartSum.totalSum[signArr[index]] track by $index">
+                           <span >
+                                {{number}}
+
+                           </span>
+                        </div>
+                    </div>
+                    <div class="bonus-row">
+                        <div class="bonus-col bg-FCF2CB" ng-repeat="number in chartSum.avgYiLou[signArr[index]] track by $index">
+                           <span >
+                                {{number}}
+
+                           </span>
+                        </div>
+                    </div>
+                    <div class="bonus-row">
+                        <div class="bonus-col c-red" ng-repeat="number in chartSum.maxLianChu[signArr[index]] track by $index">
+                           <span >
+                                {{number}}
+
+                           </span>
+                        </div>
+                    </div>
+                    <div class="bonus-row">
+                        <div class="bonus-col bg-DEEEFF" ng-repeat="number in chartSum.maxLianChu[signArr[index]] track by $index">
+                           <span >
+                                {{number}}
+
+                           </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-scroll>
+    </div>
+</div>

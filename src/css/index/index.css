@@ -1,0 +1,114 @@
+.start-up .scroll {
+  height: 100%; }
+
+.start-up {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 99; }
+  .start-up .box1, .start-up .box2, .start-up .box3, .start-up .box4 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/startup/1.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat; }
+  .start-up .box2 {
+    background-image: url("../img/startup/2.jpg"); }
+  .start-up .box3 {
+    background-image: url("../img/startup/3.jpg"); }
+  .start-up .box4 {
+    background-image: url("../img/startup/4.jpg"); }
+
+.index .slider-pager {
+  bottom: 10px; }
+  .index .slider-pager .ion-record {
+    color: #fff;
+    font-size: 12px; }
+  .index .slider-pager .active .ion-record {
+    color: #666; }
+
+.index img {
+  opacity: 0;
+  -webkit-transition: none !important;
+  transition: none !important; }
+
+.icon-notices {
+  width: 18px;
+  height: 18px;
+  background-image: url(../img/index/ic_xiaoxi999.png); }
+
+.icon-red-block {
+  width: 5px;
+  height: 5px;
+  background: #ff3939; }
+
+.icon-add {
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/index/tianjia.png); }
+
+.slide-img img {
+  width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: middle; }
+
+.notices {
+  padding: 10px;
+  color: #666;
+  background: #fff; }
+  .notices .icon-notices {
+    margin-right: 13px; }
+
+.child-channel {
+  padding: 13px 0;
+  margin-top: 10px;
+  background: #fff;
+  text-align: center; }
+  .child-channel img {
+    width: 53px;
+    height: 53px; }
+  .child-channel h3 {
+    margin: 0;
+    font-size: 13px;
+    color: #666; }
+
+.lottery-channel {
+  background: #fff;
+  margin: 10px 0 0 !important; }
+  .lottery-channel dt {
+    padding: 4px 0 4px 10px;
+    font-size: 16px;
+    color: #333; }
+    .lottery-channel dt .icon-red-block {
+      margin-right: 4px; }
+  .lottery-channel .lottery-channel-list {
+    border-top: 1px solid #ddd;
+    overflow: hidden; }
+    .lottery-channel .lottery-channel-list .col {
+      width: 50%;
+      padding: 0;
+      float: left; }
+      .lottery-channel .lottery-channel-list .col a {
+        padding: 20px 35px;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        white-space: nowrap; }
+      .lottery-channel .lottery-channel-list .col img {
+        width: 40px;
+        height: 40px;
+        margin-right: 13px;
+        vertical-align: middle; }
+
+.lottery-customize {
+  padding: 0 20px; }
+  .lottery-customize .item {
+    border-left: none;
+    border-right: none; }
+    .lottery-customize .item img {
+      width: 60px;
+      height: 60px; }
+  .lottery-customize .item-box {
+    padding: 20px 0; }

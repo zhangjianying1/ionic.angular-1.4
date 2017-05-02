@@ -1,0 +1,204 @@
+<ion-view view-title="{{bonusTitle}}走势图">
+  <ion-content overflow-scroll="true" class="bg-f4">
+    <div class="bonus-trend bouns-k3" >
+
+      <tabs index="default.index" class="shrink-box full-screen" >
+        <tab title="组合{{playName}}"  >
+            <div class="group">
+              <div class="off-line" ng-if="isOffLine">网络连接失败,请检查网络!</div>
+              <div class="loading-wrap" ng-if="isMoreGroup || isOffLine"><span class="loading" style="-webkit-transform: rotate(0deg);"></span></div>
+              <dl ng-repeat="groups in groupData track by groups.playName">
+                <dt>{{groups.playName}}</dt>
+                <dd>
+                  <ul class="block-box-list">
+                    <li ng-repeat="group in groups.numberList track by $index">
+                      <div class="box">
+                        <div class="label" ng-if="group.dayShow">今<br/>
+                          <em class="c-red">{{group.dayShow}}</em><br/>次</div>
+                        <div class="bouns-num">
+                          {{group.number}}
+                        </div>
+                        <div class="bouns-msg">
+                          <div class="cash">¥<em>{{group.bonusAmount}}</em></div>
+                          <div class="msg-list">
+                            <div class="msg-line">
+                              概率<em class="item-note">{{group.probability}}</em>
+                            </div>
+                            <div class="msg-line">
+                              当前遗漏<em class="item-note">{{group.currYiLou}}</em>
+                            </div>
+                            <div class="msg-line">
+                              最大遗漏<em class="item-note">{{group.maxYilou}}</em>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+        </tab>
+        <tab title="基本趋势" >
+          <div class="trend-column" >
+            <div class="column-header column-row" >
+              <div>
+                <div class="column-left-first bg-fdd9d9" style="color: #666">
+                  期次
+                </div>
+              </div>
+              <section class="column-left-other">
+                <div class="bonus-row">
+                  <div class="column-left-first bg-fdd9d9 " style="color: #666">
+                    号码
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    1
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    2
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    3
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    4
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    5
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    6
+                  </div>
+                </div>
+              </section>
+            </div>
+            <bonus-k3  is-more="isMore" sum-data="sumData" issue-list="issueList" issue-num="default.issueNum"  sign="def" ng-if="issueList.length && sumData" index="default.index == 1"></bonus-k3>
+          </div>
+        </tab>
+        <tab title="和值4-10" >
+          <div class="trend-column" >
+            <div class="column-header column-row" >
+              <div>
+                <div class="column-left-first bg-fdd9d9" style="color: #666">
+                  期次
+                </div>
+              </div>
+              <section class="column-left-other">
+                <div class="bonus-row">
+                  <div class="column-left-first bg-fdd9d9 " style="color: #666">
+                    号码
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    4
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    5
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    6
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    7
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    8
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    9
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    10
+                  </div>
+                </div>
+              </section>
+            </div>
+            <bonus-k3  is-more="isMore" sum-data="sumData" issue-list="issueList" issue-num="default.issueNum" ng-if="issueList.length && sumData" sign="sum4"  ></bonus-k3>
+          </div>
+        </tab>
+        <tab title="和值11-17" >
+          <div class="trend-column" >
+            <div class="column-header column-row" >
+              <div>
+                <div class="column-left-first bg-fdd9d9" style="color: #666">
+                  期次
+                </div>
+              </div>
+              <section class="column-left-other">
+                <div class="bonus-row">
+                  <div class="column-left-first bg-fdd9d9 " style="color: #666">
+                    号码
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    11
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    12
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    13
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    14
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    15
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    16
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    17
+                  </div>
+                </div>
+              </section>
+            </div>
+            <bonus-k3  is-more="isMore" sum-data="sumData" issue-list="issueList" issue-num="default.issueNum"  sign="sum11" ng-if="issueList.length && sumData" ></bonus-k3>
+          </div>
+        </tab>
+        <tab title="跨度" >
+          <div class="trend-column" >
+            <div class="column-header column-row" >
+              <div>
+                <div class="column-left-first bg-fdd9d9" style="color: #666">
+                  期次
+                </div>
+              </div>
+              <section class="column-left-other">
+                <div class="bonus-row">
+                  <div class="column-left-first bg-fdd9d9 " style="color: #666">
+                    号码
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    0
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    1
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    2
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    3
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    4
+                  </div>
+                  <div class="bonus-col bg-fdd9d9">
+                    5
+                  </div>
+                </div>
+              </section>
+            </div>
+            <bonus-k3  is-more="isMore" sum-data="sumData" issue-list="issueList" issue-num="default.issueNum"  sign="span" ng-if="issueList.length && sumData"></bonus-k3>
+          </div>
+        </tab>
+      </tabs>
+      <scroll-load ng-if="isMore && default.index > 0" on-infinite="loadMore()" distance="0" is-scroll-load="false" />
+    </div>
+
+  </ion-content>
+  <show-group   sign="group" ng-class="{'hide': default.index > 0}" ng-if="groupData.length > 0"/>
+
+</ion-view>

@@ -1,0 +1,36 @@
+<ion-view title="资讯">
+
+    <set-time-out-load-img class="bg-f4 found" >
+        <ion-refresher
+                pulling-text="下拉刷新..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
+        <div class="off-line" ng-if="isOffLine">
+          网络连接失败,请检查网络!
+        </div>
+        <div class="item-list">
+            <a class="row consult" ng-repeat="consult in consults track by consult.articleCode" ng-href="#/tab/consultdetail/{{consult.articleCode}}">
+                <div class="col consult-img">
+                    <img _src="{{consult.bannerUrl}}">
+                </div>
+                <div class="col consult-msg">
+                    <h2>
+                        {{consult.title}}
+                    </h2>
+
+                    <p>
+                        {{consult.summary}}
+                    </p>
+
+                    <div class="publish-time">
+                        <em class="tag" ng-if="consult.label">{{consult.label}}</em><i class="item-note icon"><time>{{consult.createTime}}</time></i>
+                    </div>
+                </div>
+
+            </a>
+
+        </div>
+        <ion-infinite-scroll on-infinite="loadMore()" distance="1%" ng-if="isMore" > </ion-infinite-scroll>
+
+    </set-time-out-load-img>
+</ion-view>

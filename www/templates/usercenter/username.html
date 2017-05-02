@@ -1,0 +1,29 @@
+<ion-view view-title="设置用户名">
+    <ion-content class="padding-20 set-username">
+        <form name="form" ng-submit="submit()">
+            <div class="user-name-box">
+                <img ng-src="{{inputData.headImgUrl ? inputData.headImgUrl : './img/usercenter/userphoto.png'}}" />
+                <div class="name-des">
+                    <p class="u-name"><i>用户名:</i>{{inputData.memberName}}</p>
+                    <p class="u-mobile"><i class="ion-iphone"></i>{{inputData.mobile}}</p>
+                </div>
+            </div>
+            <div class="user-editor">
+                <div class="item item-input">
+                    <my-input value="inputData.memberName" >
+                        <input type="text" autofocus="true" placeholder="" ng-model="inputData.memberName" required/>
+                    </my-input>
+                </div>
+                <p ng-if="!inputData.memberName">
+                    用户名是帐号的唯一凭证，只能设置一次，此后不能再更改
+                </p>
+                <p class="assertive" ng-if="inputData.memberName">
+                    用户名仅支持4-12个字符（每个汉字占2字符）、字母、数字、下划线或减号，以汉字、字母、数字开头
+                </p>
+            </div>
+            <div>
+                <button ng-disable="form.$invalid" class="assertive-btn">保存</button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

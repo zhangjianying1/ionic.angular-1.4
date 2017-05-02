@@ -1,0 +1,170 @@
+@import '../../css/public.scss';
+
+// 公用begin
+.lottery-num{
+  width: 100%;
+  em{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    border-radius: 25px;
+    background: $red;
+    text-align: center;
+    line-height: 24px;
+    color: #fff;
+    &.font-blue{
+      background: $blue;
+    }
+  }
+}
+.active-show{
+  .item-note{
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  .lottery-bonus{
+    display: block;
+  }
+}
+.soon-bonus{
+  width: 100%;
+  font-size: 12px;
+  span{
+    padding-right: 5px;
+    font-size: 16px;
+    color: $blue;
+  }
+
+}
+// 公用end
+
+// 开奖 begin
+.lottery{
+  .item{
+    padding: 16px 15px;
+  }
+  .lottery-img{
+    align-self: flex-start;
+  }
+  .lottery-name{
+    width: 100%;
+    margin-bottom: 14px;
+    font-size: 16px;
+    color: #333;
+    em{
+      padding-left: 6px;
+      font-size: 12px;
+      color: #999;
+      vertical-align: 1px;
+    }
+    .item-note{
+      @extend em;
+      padding-right: 8px;
+
+    }
+  }
+  .lottery-img{
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .lottery-issue{
+    padding: 0 0 0 10px;
+    flex: 1;
+    box-flex: 1;
+    flex-direction: column;
+    box-orient: vertical;
+  }
+
+}
+
+// 开奖 end
+
+// 开奖列表 begin
+.icon-calculate{
+  width: 40px;
+  height: 40px;
+  margin-top: -3px;
+  background-image: url(../img/lottery/ic-jiangjinjisuan.png);
+}
+.lottery-list{
+  .item-note{
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    -webkit-transition: all ease .3s;
+    transition: all ease .3s;
+    transform-origin: 29% 39%;
+    &.rodate90{
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+  }
+  .item{
+    padding: 16px 0;
+    &.activated{
+      background: none;
+    }
+  }
+}
+.lottery-list-box{
+  width: 100%;
+  padding: 0;
+  flex-direction: column;
+  .lottery-issue{
+    padding-left: 15px;
+    width: 100%;
+  }
+  .lottery-issue-time{
+    margin-bottom: 12px;
+    em{
+      padding-right: 6px;
+      font-size: 16px;
+      color: #333;
+    }
+  }
+
+
+}
+.lottery-bonus{
+  display: none;
+  width: 100%;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #666;
+  .item-input{
+    padding: 0;
+    div{
+      flex: 1;
+      box-flex: 1;
+      text-align: center;
+    }
+  }
+  dl{
+    margin: 0;
+  }
+  .bonus-header{
+    padding: 8px 0;
+    background: #eee;
+  }
+  .bonus-full{
+    padding: 8px 0;
+    font-size: 14px;
+  }
+  .bouns-msg{
+    padding: 3px 0;
+  }
+}
+
+// 快三
+.lottery-dice{
+  padding: 0;
+  font-size: 14px;
+  color: #333;
+  img {
+    width: 25px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+}
+// 开奖列表 end

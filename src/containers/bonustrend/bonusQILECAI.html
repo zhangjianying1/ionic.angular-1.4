@@ -1,0 +1,34 @@
+<ion-view view-title="{{bonusTitle}}走势图">
+    <ion-content class="" style="overflow:hidden"  overflow-scroll="true">
+
+        <div class="bonus-cycle bonus-trend">
+            <tabs index="default.index" is-header-bor="true" class="full-screen">
+                <tab title="{{$wrapIndex == 0 ? '一' : $wrapIndex == 1 ? '二' : $wrapIndex == 2 ? '三' : ''}}区" delegate-handle="{{$wrapIndex}}" ng-repeat="($wrapIndex, i) in [0,2,4]">
+                    <div class="trend-column" >
+                        <div class="column-header column-row">
+                            <div>
+                              <div class="column-left-first">
+                                期号
+                              </div>
+                            </div>
+                            <div class="column-left-other">
+                                <div class="bonus-row">
+                                    <div class="bonus-col bg-fdd9d9" ng-repeat="number in [1,2,3,4,5,6,7,8,9,0] track by $index">
+                                <span>
+                                    {{$index}}
+                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <bonus-full issue-list="issueList"  sign="def{{$wrapIndex+1}}"  ng-if="issueList.length"></bonus-full>
+                    </div>
+                </tab>
+            </tabs>
+          <scroll-load ng-if="isMore" on-infinite="loadMore()" />
+        </div>
+        <show-more class="full-screen" sign-arr="[10, 10, 10]" index="default.index" ></show-more>
+
+    </ion-content>
+
+</ion-view>

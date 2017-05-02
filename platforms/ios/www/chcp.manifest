@@ -1,0 +1,718 @@
+[
+  {
+    "file": "css/containers.min.css",
+    "hash": "6dff57a531c3f24f4456b0f78ca9f9ab"
+  },
+  {
+    "file": "img/activitys/sign/beimian.png",
+    "hash": "c1452f87bd45c977d6a8cf5e964250c7"
+  },
+  {
+    "file": "img/activitys/sign/pic_qiandao.png",
+    "hash": "2d5d71582b85813a4c14c9c53613dd43"
+  },
+  {
+    "file": "img/activitys/sign/pic_zhuangshi.png",
+    "hash": "a4f6ff752cf8bc657add1def16416d3c"
+  },
+  {
+    "file": "img/activitys/sign/zhengmian.png",
+    "hash": "cb10afafe23c4693f88ecda20219d598"
+  },
+  {
+    "file": "img/bonustrend/bt-l.png",
+    "hash": "1bc09f6d37c6abf985635a800878c96a"
+  },
+  {
+    "file": "img/bonustrend/bt-r.png",
+    "hash": "0c2fef8e40155cbbd89d014e9b8caeac"
+  },
+  {
+    "file": "img/bonustrend/jiangjin.png",
+    "hash": "fa684e11d4284111709acfa55571ed68"
+  },
+  {
+    "file": "img/bonustrend/label.png",
+    "hash": "c3a6c06d5d7ed119d3a92eaa98380ab0"
+  },
+  {
+    "file": "img/bonustrend/shaizi.png",
+    "hash": "ad352cecd27678061d344cc4e74fd535"
+  },
+  {
+    "file": "img/calculate/delete.png",
+    "hash": "3452724ac56ab1dd8f71d18d778bc171"
+  },
+  {
+    "file": "img/calculate/pengyouquan.png",
+    "hash": "9a58c63ed3f86561ce7cb78254256839"
+  },
+  {
+    "file": "img/calculate/weixin.png",
+    "hash": "fbf9cdbc5641cee9521f9fb3a96df575"
+  },
+  {
+    "file": "img/calculate/win.png",
+    "hash": "1cce7f80e534154f5fbb5f05f5009660"
+  },
+  {
+    "file": "img/calculate/xialaxuanze.png",
+    "hash": "631e2ae9d855e4bbe8e9b77796fb0993"
+  },
+  {
+    "file": "img/down-show-btn.png",
+    "hash": "423324a8dacbd4df51db29cc63c8baa4"
+  },
+  {
+    "file": "img/entry/ic_back.png",
+    "hash": "420cb4f4c068818a2c7380063e3097ff"
+  },
+  {
+    "file": "img/entry/ic_clean_b.png",
+    "hash": "c285290e19bc299ab372e0244f03bf2c"
+  },
+  {
+    "file": "img/entry/ic_clean.png",
+    "hash": "a0ab56304dfcd6abb1c89d8ef332a640"
+  },
+  {
+    "file": "img/entry/ic_lock-eye.png",
+    "hash": "725277f1c00289a4311675f2ec7b0960"
+  },
+  {
+    "file": "img/entry/ic_lock.png",
+    "hash": "9fcaa94fa8650ba1260de1b4f507e872"
+  },
+  {
+    "file": "img/entry/ic_phone.png",
+    "hash": "cd924dff695690017c495b5e3bd1fbc6"
+  },
+  {
+    "file": "img/entry/ic_QQ.png",
+    "hash": "72adcee5928ee4cd012edced1b7835fb"
+  },
+  {
+    "file": "img/entry/ic_show-eye.png",
+    "hash": "563669c3a29b91d7df93cdb6450d02f9"
+  },
+  {
+    "file": "img/entry/ic_weixin.png",
+    "hash": "87c32776ddee52aced2de7fe34ec6d53"
+  },
+  {
+    "file": "img/entry/ic_zhifubao.png",
+    "hash": "9a1ed3ab34b2900a7598c56e7d9aca10"
+  },
+  {
+    "file": "img/entry/login-bg.png",
+    "hash": "318358efe4a24bf3d83726293b1810ea"
+  },
+  {
+    "file": "img/entry/logo.png",
+    "hash": "9302b4b568f9211fa9267d7d43c73378"
+  },
+  {
+    "file": "img/found/ic_gonggao.png",
+    "hash": "f60499452c817f1237fc1afd1b431768"
+  },
+  {
+    "file": "img/found/ic_kaijang.png",
+    "hash": "e5480cfa17cb032f6b50ed41a2cccf83"
+  },
+  {
+    "file": "img/found/ic_xiangqing.png",
+    "hash": "3de7ca241ce5f0d0e3c8ccb72f44a6b8"
+  },
+  {
+    "file": "img/found/ic_xiaoxi.png",
+    "hash": "881087c87d5119b5fc8074d6eac20e12"
+  },
+  {
+    "file": "img/found/ic_zixun.png",
+    "hash": "2d13ed9a6fef0a3b6094abc7d2d0e3d6"
+  },
+  {
+    "file": "img/found/ic_zoushi.png",
+    "hash": "4b321b3f424ec521cffe1a0b1619ab71"
+  },
+  {
+    "file": "img/found/pic_xiaoxi.png",
+    "hash": "f1f1283995f0c77d59d7af2f855e7d3d"
+  },
+  {
+    "file": "img/found/pic-shuangseqiu.png",
+    "hash": "4e7f58cd5fccb59960c3d827f2ce8baa"
+  },
+  {
+    "file": "img/index/dingzhi.png",
+    "hash": "31128b535c1e17ad159bc0317c350ec2"
+  },
+  {
+    "file": "img/index/ic_kaijang.png",
+    "hash": "4fadcba2b7abe07856397a95dca89d8f"
+  },
+  {
+    "file": "img/index/ic_qiandao.png",
+    "hash": "4ca90595c4ab5b30c52badfefd4cea13"
+  },
+  {
+    "file": "img/index/ic_xiaoxi.png",
+    "hash": "d83aa4d209da7b3b476e4751c3be3ca9"
+  },
+  {
+    "file": "img/index/ic_zoushi.png",
+    "hash": "055d0d5c4aa1c0ce14f5d3fc82c4a30a"
+  },
+  {
+    "file": "img/index/logo.png",
+    "hash": "9302b4b568f9211fa9267d7d43c73378"
+  },
+  {
+    "file": "img/index/tianjia.png",
+    "hash": "a5c645abb73261af7c3a3633a8227ac1"
+  },
+  {
+    "file": "img/index/xuanze_no.png",
+    "hash": "f8772b6b02ea0b2cf9cdc73fe51ebd5f"
+  },
+  {
+    "file": "img/index/xuanze_yes.png",
+    "hash": "3678a4d3e637d77e001e76e219543529"
+  },
+  {
+    "file": "img/loading_icon.png",
+    "hash": "ec5fd42f3290a92a92328331c7336e13"
+  },
+  {
+    "file": "img/lottery/001.png",
+    "hash": "904916b93d0a6c76eb1bed75201e344d"
+  },
+  {
+    "file": "img/lottery/002.png",
+    "hash": "7fb540edd4605bda3f2e1d347eecdc2f"
+  },
+  {
+    "file": "img/lottery/004.png",
+    "hash": "6af30469157216e7ee9e901a8278d293"
+  },
+  {
+    "file": "img/lottery/010.png",
+    "hash": "12f011a82d0c0572e5fa715b0eb346ab"
+  },
+  {
+    "file": "img/lottery/011.png",
+    "hash": "d26b2568dda1c097ad2cfc0c4f9febbe"
+  },
+  {
+    "file": "img/lottery/018.png",
+    "hash": "5637a836b321a5f4d236d58052224241"
+  },
+  {
+    "file": "img/lottery/1.png",
+    "hash": "fbeb833d765c23944059b1e5f8d4e16f"
+  },
+  {
+    "file": "img/lottery/105.png",
+    "hash": "5d592cd3c954579fa7ea464267098929"
+  },
+  {
+    "file": "img/lottery/108.png",
+    "hash": "edacf5dd2c8096d02d75e37eafa3d0b7"
+  },
+  {
+    "file": "img/lottery/109.png",
+    "hash": "5d592cd3c954579fa7ea464267098929"
+  },
+  {
+    "file": "img/lottery/110.png",
+    "hash": "a363e09b5863055741a4f7efab53f5d3"
+  },
+  {
+    "file": "img/lottery/113.png",
+    "hash": "31108b4856e5553f32e61310f871dc91"
+  },
+  {
+    "file": "img/lottery/114.png",
+    "hash": "cb6939fdb0188c239bb55ec251cd7faa"
+  },
+  {
+    "file": "img/lottery/2.png",
+    "hash": "561cc2ef67d92efd0e197f3a7ace858e"
+  },
+  {
+    "file": "img/lottery/3.png",
+    "hash": "15c8746dee2ba5850223652fba1e3e97"
+  },
+  {
+    "file": "img/lottery/4.png",
+    "hash": "5e55eec398f4ea71b0bc7402a8df5942"
+  },
+  {
+    "file": "img/lottery/5.png",
+    "hash": "b6b14b5aa99855ef1cacaa5c5341e10c"
+  },
+  {
+    "file": "img/lottery/6.png",
+    "hash": "b5ef2d56282847b254d8ee1c66e68922"
+  },
+  {
+    "file": "img/lottery/ic-jiangjinjisuan.png",
+    "hash": "909c8b246f85b2fa117b6a0096222780"
+  },
+  {
+    "file": "img/other-logo/lianlianfu.png",
+    "hash": "4f66f89bdd452d6f56aba77e3d2c31a9"
+  },
+  {
+    "file": "img/programme/chenggong.png",
+    "hash": "6b7a02c4c0d9e2634de8ca4b2d5670ac"
+  },
+  {
+    "file": "img/programme/weixuanzhong.png",
+    "hash": "df4b39290106e82a2d46e3a4d3a70082"
+  },
+  {
+    "file": "img/programme/wudingdan.png",
+    "hash": "30935e8b6db43675b94170488cfebc29"
+  },
+  {
+    "file": "img/programme/xuanzhong.png",
+    "hash": "96de2b00f2fb9d5697670e4da0278968"
+  },
+  {
+    "file": "img/programme/zhongjiang.png",
+    "hash": "cec49610c7e5f3548c14c99a78c24af4"
+  },
+  {
+    "file": "img/pull_up_icon.png",
+    "hash": "35ce477e90f9ab78e08396a36065791a"
+  },
+  {
+    "file": "img/startup/1.jpg",
+    "hash": "47cc09d650a7dfb234f76bbff228cb2c"
+  },
+  {
+    "file": "img/startup/2.jpg",
+    "hash": "f314cec71417d693308988cef3137f93"
+  },
+  {
+    "file": "img/startup/3.jpg",
+    "hash": "a386aab606a9cf56cc2a7dcd79f94f9a"
+  },
+  {
+    "file": "img/startup/4.jpg",
+    "hash": "1b25cbe77c86c39d39cbded347b32e43"
+  },
+  {
+    "file": "img/startup/splash.png",
+    "hash": "b6a735b37539b52f1dae75fb024f956b"
+  },
+  {
+    "file": "img/startup/startup1.jpg",
+    "hash": "ef5e7e0cd0ee9467ea8966c863f77800"
+  },
+  {
+    "file": "img/startup/startup2.jpg",
+    "hash": "fd893571be8fbee10bcf8b9ed990d2bb"
+  },
+  {
+    "file": "img/usercenter/bg_wo.png",
+    "hash": "96b2bb3668b62997d6bdb65514b5ce06"
+  },
+  {
+    "file": "img/usercenter/bt_pengyouquan.png",
+    "hash": "789351e3b47f707227141456971ec9e7"
+  },
+  {
+    "file": "img/usercenter/bt_weibo.png",
+    "hash": "43214b35de6d6befd67b2b6fee204ca8"
+  },
+  {
+    "file": "img/usercenter/bt_weixin.png",
+    "hash": "57c5a68729e36cf31f82200edb4dffa6"
+  },
+  {
+    "file": "img/usercenter/caimi_logo.png",
+    "hash": "04728f9aa1cee5cbd3cf4d23b06a222e"
+  },
+  {
+    "file": "img/usercenter/coupon-border.png",
+    "hash": "67c02334d27cf6bbb2e19e188310baf0"
+  },
+  {
+    "file": "img/usercenter/ic_aboutus.png",
+    "hash": "72ba1cdd59da269cbba8db376cb61618"
+  },
+  {
+    "file": "img/usercenter/ic_back copy.png",
+    "hash": "9add0adf9a33d53cbf1bc124d4654739"
+  },
+  {
+    "file": "img/usercenter/ic_exchange.png",
+    "hash": "019d4dd442e55fdd22c72628363cc11d"
+  },
+  {
+    "file": "img/usercenter/ic_find_active.png",
+    "hash": "ab3f752db562340cfd1dc387d65de730"
+  },
+  {
+    "file": "img/usercenter/ic_find_disabled.png",
+    "hash": "bdcf51cd4adc8da48f866cbd3e67a5b5"
+  },
+  {
+    "file": "img/usercenter/ic_gengduo.png",
+    "hash": "9482b5cf7ee040929c9b7951c769ca3c"
+  },
+  {
+    "file": "img/usercenter/ic_help.png",
+    "hash": "3677cddad95a34ef03b5f292ea4f523e"
+  },
+  {
+    "file": "img/usercenter/ic_house_active.png",
+    "hash": "4506e5c8332e4f5c377e12ebe15e62fc"
+  },
+  {
+    "file": "img/usercenter/ic_house_disabled.png",
+    "hash": "c52c43d438d2142cc7f003b73f7fa129"
+  },
+  {
+    "file": "img/usercenter/ic_mingxi.png",
+    "hash": "c5140ae8be5618f2c65617e383526c3a"
+  },
+  {
+    "file": "img/usercenter/ic_noselect.png",
+    "hash": "f8772b6b02ea0b2cf9cdc73fe51ebd5f"
+  },
+  {
+    "file": "img/usercenter/ic_order.png",
+    "hash": "cc9f11e3dfcd599c63a51249b0e43d8a"
+  },
+  {
+    "file": "img/usercenter/ic_programme_active.png",
+    "hash": "60ce7e4b5f34a3bfa27cff2ec086f536"
+  },
+  {
+    "file": "img/usercenter/ic_programme_disabled.png",
+    "hash": "38030eb66528d7a0c0ad88be61b1bc90"
+  },
+  {
+    "file": "img/usercenter/ic_programme.png",
+    "hash": "bd64362f4c7ef98e0d5aa0653c6e19cf"
+  },
+  {
+    "file": "img/usercenter/ic_recharge.png",
+    "hash": "4665b0c04162ba18c536524f00a4ca79"
+  },
+  {
+    "file": "img/usercenter/ic_selected.png",
+    "hash": "3678a4d3e637d77e001e76e219543529"
+  },
+  {
+    "file": "img/usercenter/ic_share.png",
+    "hash": "47777f2e8d54c8348d6ca2329b8925ac"
+  },
+  {
+    "file": "img/usercenter/ic_shouji_yonghuming.png",
+    "hash": "ff055927544aecd30b33d6e113237afb"
+  },
+  {
+    "file": "img/usercenter/ic_shouji.png",
+    "hash": "fee07408cab421976ec3f8ccc7640dc0"
+  },
+  {
+    "file": "img/usercenter/ic_tiaozhuan.png",
+    "hash": "3de7ca241ce5f0d0e3c8ccb72f44a6b8"
+  },
+  {
+    "file": "img/usercenter/ic_user_active.png",
+    "hash": "3247a92980181379890ca6980ba8dfb8"
+  },
+  {
+    "file": "img/usercenter/ic_user_disabled.png",
+    "hash": "e146decd169b63c97eeeafaf2d3f1d3e"
+  },
+  {
+    "file": "img/usercenter/ic_youhuiquan.png",
+    "hash": "9eaeff4370dcb3241fd2fb232381cfca"
+  },
+  {
+    "file": "img/usercenter/morentouxiang.png",
+    "hash": "b790c58b553a70f7fcee4dc3f6cdfa28"
+  },
+  {
+    "file": "img/usercenter/pic_mibi.png",
+    "hash": "80e94b124719d88df1f6d16cf2297cb2"
+  },
+  {
+    "file": "img/usercenter/QQ.png",
+    "hash": "511fb7b6dced3d39c745dd4550b7f854"
+  },
+  {
+    "file": "img/usercenter/recharge-detail-border.png",
+    "hash": "c1e2a844fbf7d4c74f48863591920d64"
+  },
+  {
+    "file": "img/usercenter/touxiang.png",
+    "hash": "83682424316999d26d9d42e321e6ce94"
+  },
+  {
+    "file": "img/usercenter/userphoto.png",
+    "hash": "1f3fdf42b9571f395c1599347ebb479e"
+  },
+  {
+    "file": "img/usercenter/weixin.png",
+    "hash": "28e395fd4c2f1d7d16c0637aad6fd21c"
+  },
+  {
+    "file": "img/usercenter/wo_xuanzhong.png",
+    "hash": "d296e14a0795fef5b1d997c3c48bb212"
+  },
+  {
+    "file": "img/usercenter/wudingdan.png",
+    "hash": "30935e8b6db43675b94170488cfebc29"
+  },
+  {
+    "file": "img/usercenter/zhifubao.png",
+    "hash": "b8fb5a71b250b5321ec023febc357aac"
+  },
+  {
+    "file": "index.html",
+    "hash": "05140890eb96f8b196f7defb027c5998"
+  },
+  {
+    "file": "js/app.js",
+    "hash": "b1d9949a92ebedf96a83a90e2d91b9b2"
+  },
+  {
+    "file": "lib/ionic/css/ionic.min.css",
+    "hash": "20d29ea12426cffb05c508c88acdb11a"
+  },
+  {
+    "file": "lib/ionic/fonts/ionicons.eot",
+    "hash": "2c2ae068be3b089e0a5b59abb1831550"
+  },
+  {
+    "file": "lib/ionic/fonts/ionicons.svg",
+    "hash": "621bd386841f74e0053cb8e67f8a0604"
+  },
+  {
+    "file": "lib/ionic/fonts/ionicons.ttf",
+    "hash": "24712f6c47821394fba7942fbb52c3b2"
+  },
+  {
+    "file": "lib/ionic/fonts/ionicons.woff",
+    "hash": "05acfdb568b3df49ad31355b19495d4a"
+  },
+  {
+    "file": "lib/ionic/js/ionic.bundle.min.js",
+    "hash": "940466e58c5d23511aab97b24ef14702"
+  },
+  {
+    "file": "lib/ionic/js/md5.js",
+    "hash": "5c8d847709d2edae99f574372194e3ba"
+  },
+  {
+    "file": "lib/ionic/js/ng-cordova.min.js",
+    "hash": "5c2332c0d6da30e9eaab7f1ab32d46d8"
+  },
+  {
+    "file": "lib/ionic/version.json",
+    "hash": "421fc5b26f0c248e73d067ca80dbd6e1"
+  },
+  {
+    "file": "templates/activity/sign.html",
+    "hash": "7e9378e3948d813938bc81db8061e371"
+  },
+  {
+    "file": "templates/bonustrend/bonus115.html",
+    "hash": "01c63076f3eea9d7bb39472f69edfce2"
+  },
+  {
+    "file": "templates/bonustrend/bonus3d.html",
+    "hash": "66c2e719cbba27a68518a1d2192d94ea"
+  },
+  {
+    "file": "templates/bonustrend/bonuscycle.html",
+    "hash": "c886a077e0b8ecec82462dbae75d0013"
+  },
+  {
+    "file": "templates/bonustrend/bonusentry.html",
+    "hash": "35752d6317957327cfef0420a00fc088"
+  },
+  {
+    "file": "templates/bonustrend/bonusfull.html",
+    "hash": "07c6bbce8d6be3c00a60cd742862fe31"
+  },
+  {
+    "file": "templates/bonustrend/bonusKUAISAN.html",
+    "hash": "d527f475241ed0923cdd0248cf97b4d7"
+  },
+  {
+    "file": "templates/bonustrend/bonusPAILIEWU.html",
+    "hash": "3a94e0d0935096ee908eebc60d48a362"
+  },
+  {
+    "file": "templates/bonustrend/bonusQILECAI.html",
+    "hash": "42c3dc489337e4ef3d74bdb42279ad1a"
+  },
+  {
+    "file": "templates/bonustrend/sum.html",
+    "hash": "448877156fa2cc97ad7be06830e49a8d"
+  },
+  {
+    "file": "templates/calculate/calculate.html",
+    "hash": "18e649f1b79c2dbb98d93a6eb0fe9c39"
+  },
+  {
+    "file": "templates/capital/balance.html",
+    "hash": "81ffbad889cb491c11a6190f56811ede"
+  },
+  {
+    "file": "templates/capital/coupon.html",
+    "hash": "b2d9ecb4ed96cde650256c8d3c2d036f"
+  },
+  {
+    "file": "templates/capital/recharge.html",
+    "hash": "608b56dac5b3cf6cc8d3f917b336191d"
+  },
+  {
+    "file": "templates/capital/rechargedetail.html",
+    "hash": "9efcbb2ac36cdcc6fa12f2613d143d12"
+  },
+  {
+    "file": "templates/entry/forgetpassword.html",
+    "hash": "b87e639bbbd1e03fff5075d638f68a0d"
+  },
+  {
+    "file": "templates/entry/login.html",
+    "hash": "716467c29fbe85fe7be5688211a1f7ab"
+  },
+  {
+    "file": "templates/entry/register.html",
+    "hash": "d94e0bf1a759e2e1036eb32a7d94f805"
+  },
+  {
+    "file": "templates/entry/registeragreement.html",
+    "hash": "4dd310863acdc970a72e9af34275feb4"
+  },
+  {
+    "file": "templates/entry/resetpassword.html",
+    "hash": "084e920993e52cc48464e23c689460d9"
+  },
+  {
+    "file": "templates/found/bonusentry.html",
+    "hash": "1e3b55db5ba723d959b43eec15e7f38f"
+  },
+  {
+    "file": "templates/found/consult.html",
+    "hash": "ef8724604690de4d12ad80ab3fa4c7cb"
+  },
+  {
+    "file": "templates/found/consultdetail.html",
+    "hash": "f82f465206ef4e242cd1810602bae335"
+  },
+  {
+    "file": "templates/found/found.html",
+    "hash": "59b83a1d96f37ec2c9ce0c4047c92647"
+  },
+  {
+    "file": "templates/found/notice.html",
+    "hash": "4ad6b0b70de5425d49a3fc9b7e8ad56d"
+  },
+  {
+    "file": "templates/found/noticedetail.html",
+    "hash": "a10dac66adfe7ed9aa9589defc3a05a6"
+  },
+  {
+    "file": "templates/index.html",
+    "hash": "a0cda886e2795fbc9579d340eee62931"
+  },
+  {
+    "file": "templates/index/index.html",
+    "hash": "355f4fdebd06f8eda48d078814cdb228"
+  },
+  {
+    "file": "templates/index/lotterycustomize.html",
+    "hash": "1399949861a07d8a70c330df6a26cf17"
+  },
+  {
+    "file": "templates/index/startup.html",
+    "hash": "ec03a348bada6c28b7c2db586c902894"
+  },
+  {
+    "file": "templates/lottery/lottery.html",
+    "hash": "594c32fd1a17b79a0fbae39459af8178"
+  },
+  {
+    "file": "templates/lottery/lotterylist.html",
+    "hash": "87af8b83c34e6658de01f970b5da1ef2"
+  },
+  {
+    "file": "templates/programme/programme.html",
+    "hash": "6d6edcadd507072fc244885cc4b536a2"
+  },
+  {
+    "file": "templates/programme/programmedetail.html",
+    "hash": "39bcb8fbcd8b240c8130baa54b2b4249"
+  },
+  {
+    "file": "templates/programme/programmeorder.html",
+    "hash": "89b5b01370373a9d2fa112bc6134283d"
+  },
+  {
+    "file": "templates/programme/usecoupon.html",
+    "hash": "e1f67b4634557a8ae43a909734960f01"
+  },
+  {
+    "file": "templates/tabs.html",
+    "hash": "0e53916af0beb0640c638b498218abe6"
+  },
+  {
+    "file": "templates/usercenter/moditypassword.html",
+    "hash": "08401c1f6a0c29f596edaa27beb64189"
+  },
+  {
+    "file": "templates/usercenter/order.html",
+    "hash": "3153b9e038186a520c504fb0f45a0256"
+  },
+  {
+    "file": "templates/usercenter/setpassword.html",
+    "hash": "9b26fddf1b3a7499b102553103a71fed"
+  },
+  {
+    "file": "templates/usercenter/useraccount.html",
+    "hash": "f54d1ea1d591ab713338068b9c8454c3"
+  },
+  {
+    "file": "templates/usercenter/usermobile.html",
+    "hash": "b2b50460aa9298b0785e826e84ca7f21"
+  },
+  {
+    "file": "templates/usercenter/usermsg.html",
+    "hash": "1f157295c5ac1e4a770c213765b81234"
+  },
+  {
+    "file": "templates/usercenter/username.html",
+    "hash": "cb0f95e0664de739b3b45e7599e951db"
+  },
+  {
+    "file": "templates/usercenter/userphoto.html",
+    "hash": "74c5fa7882b17a5779d45eba2a5297bd"
+  },
+  {
+    "file": "templates/usercenter/userunion.html",
+    "hash": "ac75d86ba45d80403ed443a7b2cb6c85"
+  },
+  {
+    "file": "templates/userfunc/aboutus.html",
+    "hash": "222f7d3af6c4d814c8a7915f1a936ed1"
+  },
+  {
+    "file": "templates/userfunc/help.html",
+    "hash": "ff7fece6055d997b7c75187ad1786e27"
+  },
+  {
+    "file": "templates/userfunc/setting.html",
+    "hash": "a7c71d288e4dc36488e291ec62e1644c"
+  }
+]

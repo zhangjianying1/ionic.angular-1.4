@@ -1,0 +1,36 @@
+<ion-view view-title="{{bonusTitle}}走势图">
+    <ion-content overflow-scroll="true">
+
+        <div class="bonus-cycle bonus-trend" >
+
+            <tabs index="default.index" class="shrink-box full-screen" >
+                <tab title="第{{$tabIndex == 0 ? '一' : $tabIndex == 1 ? '二' : $tabIndex == 2 ? '三' :
+                $tabIndex == '3' ? '四' : $tabIndex == '4' ? '五' : $tabIndex == '5' ? '六' : $tabIndex == '6' ? '七' : ''}}位"
+                           delegate-handle="{{$tabIndex}}"
+                           ng-repeat="($tabIndex, i) in default.digitArr" >
+
+                        <div class="trend-column" >
+                            <div class="column-header column-row">
+                                <div>
+                                  <div class="column-left-first">
+                                      期号
+                                  </div>
+                                </div>
+                                <section class="column-left-other">
+                                  <issue issue-data="[0,1,2,3,4,5,6,7,8,9]" />
+                                </section>
+                            </div>
+                            <bonus-full issue-list="issueList"  sign="def{{$tabIndex+1}}"  ng-if="issueList.length" ></bonus-full>
+                        </div>
+                </tab>
+
+                </tabs>
+          <scroll-load ng-if="isMore" on-infinite="loadMore()" />
+        </div>
+
+      <show-more sign-arr="['def1', 'def2', 'def3', 'def4', 'def5', 'def6', 'def7']" index="default.index"  ></show-more>
+
+    </ion-content>
+
+
+</ion-view>

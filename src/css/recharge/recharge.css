@@ -1,0 +1,56 @@
+.recharge .re-count {
+  color: #333;
+  font-size: 19px; }
+
+.recharge .col {
+  padding: 10px 0;
+  border: 1px solid #ff3939;
+  margin-bottom: 20px;
+  color: #ff3939;
+  font-size: 17px;
+  border-radius: 8px;
+  text-align: center; }
+  .recharge .col.active {
+    background: #ff3939;
+    color: #fff; }
+  .recharge .col:nth-of-type(2) {
+    margin-left: 20px;
+    margin-right: 20px; }
+
+.recharge .item-input {
+  padding: 8px 0;
+  border-radius: 4px; }
+  .recharge .item-input input {
+    text-align: center;
+    font-size: 17px; }
+
+.recharge .service-tips {
+  margin: 10px 0 25px; }
+
+.recharge-sub {
+  height: 52px;
+  padding: 0; }
+  .recharge-sub .item-box-flex-1 {
+    margin-left: 10px; }
+  .recharge-sub .assertive-btn {
+    width: auto;
+    height: 52px;
+    padding: 0 25px;
+    border-radius: 0;
+    font-size: 19px; }
+  .recharge-sub .re-cash {
+    font-size: 15px;
+    color: #666; }
+    .recharge-sub .re-cash .c-red {
+      font-size: 18px; }
+  .recharge-sub .re-fictitfious-cash {
+    font-size: 12px;
+    color: #666; }
+
+.icon-noselect, .icon-selected {
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/usercenter/ic_noselect.png); }
+
+.icon-selected {
+  background-image: url(../img/usercenter/ic_selected.png); }

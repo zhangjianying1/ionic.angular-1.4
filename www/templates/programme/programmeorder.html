@@ -1,0 +1,95 @@
+<ion-view view-title="方案订单详情">
+    <ion-content class="programme-order">
+        <div >
+            <div class="row c-row">
+                <div class="col lottery-icon">
+                    <img ng-src="./img/lottery/{{orderDetail.lotteryCode}}.png" />
+                </div>
+                <div class="col fs-15">
+                    {{orderDetail.lotteryName}}
+                </div>
+                <div class="col">
+                    <div class="fs-14">第{{orderDetail.issue}}期</div>
+                </div>
+            </div>
+            <dl class="recommend-hot-number">
+                <dt>热号推荐</dt>
+                <dd class="lottery-type">
+                    {{orderDetail.remark}}
+                    <div class="lottery-num child-margin30">
+                        <em ng-repeat="bonusNumber in orderDetail.number.split(',') track by $index" ng-class="{'font-blue': orderDetail.lotteryCode == '001' || orderDetail.lotteryCode == '113'}" >{{bonusNumber}}</em>
+                    </div>
+                </dd>
+            </dl>
+
+            <div class="list orderDetail-order-list">
+                <div class="item">
+                    方案编号
+                    <span class="item-note">
+                      {{orderDetail.programCode}}
+                    </span>
+                </div>
+                <div class="item ">
+                    开奖号码
+                    <span class="item-note">
+                    <div class="lottery-num" ng-if="orderDetail.bonusNumber.length"><em ng-repeat="bonusNumber in orderDetail.bonusNumber track by $index" ng-class="{'font-blue': bonusNumber.blueBool}">{{bonusNumber.blueBool ? bonusNumber.blueBool : bonusNumber }}</em></div>
+
+                    </span>
+                </div>
+                <div class="item " >
+                    方案状态
+                    <span class="item-note" ng-class="{'c-blue': orderDetail.programStatus == 0}">
+
+                        {{orderDetail.programStatusDesc}}
+                    </span>
+                </div>
+                <div class="item ">
+                    订单状态
+                    <span class="item-note">
+                        {{orderDetail.orderStatusDesc}}
+
+                    </span>
+                </div>
+            </div>
+            <dl class="dl-box">
+                <dt class="header">
+                    支付信息
+                </dt>
+                <dd class="body">
+                    <div class="item">
+                        订单编号
+                         <span class="item-note">
+                          {{orderDetail.orderCode}}
+                        </span>
+                    </div>
+                    <div class="item">
+                        佣金总额
+                         <span class="item-note">
+                          {{orderDetail.amount}} 米币
+                        </span>
+                    </div>
+                    <div class="item" ng-if="orderDetail.couponAmount">
+                        优惠券优惠
+                         <span class="item-note">
+                          -{{orderDetail.couponAmount}} 米币
+                        </span>
+                    </div>
+                    <div class="item">
+                        实际支付
+                         <span class="item-note c-red">
+                          {{orderDetail.mcoin}} 米币
+                        </span>
+                    </div>
+                    <div class="item">
+                        订购时间
+                         <span class="item-note">
+                          {{orderDetail.orderTime}}
+                        </span>
+                    </div>
+                </dd>
+
+            </dl>
+        </div>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,281 @@
+.user-bg {
+  position: relative;
+  background: #fff; }
+  .user-bg img {
+    width: 100%; }
+
+.show-name {
+  width: 100%;
+  position: absolute;
+  bottom: -9px;
+  text-align: center;
+  color: #fff; }
+  .show-name h2 {
+    color: #fff;
+    font-size: 22px; }
+  .show-name .icon-mobile {
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
+    vertical-align: sub; }
+  .show-name img {
+    height: 82px;
+    width: 82px;
+    margin-top: 40px;
+    border-radius: 41px; }
+
+body.platform-webview.platform-ios .show-name img {
+  margin-top: 17px; }
+
+.account-balance {
+  padding: 40px 3px 5px; }
+  .account-balance .col {
+    text-align: center;
+    padding: 5px 0; }
+    .account-balance .col em {
+      color: #333;
+      font-size: 18px; }
+    .account-balance .col p {
+      color: #999;
+      font-size: 14px; }
+    .account-balance .col a {
+      border-right: 1px solid #ddd; }
+    .account-balance .col:last-child a {
+      border: none; }
+
+.transaction {
+  padding: 5px 0 !important;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  background: #fff; }
+  .transaction .col {
+    padding: 8px 0;
+    text-align: center; }
+    .transaction .col:last-child {
+      border-left: 1px solid #ddd; }
+  .transaction .icon-recharge, .transaction .icon-exchange {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    background-image: url(../img/usercenter/ic_recharge.png);
+    vertical-align: -6px; }
+  .transaction .icon-exchange {
+    background-image: url(../img/usercenter/ic_exchange.png); }
+
+.user-items {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #333; }
+  .user-items .item {
+    padding: 20px 23px; }
+    .user-items .item:nth-type-of(1) {
+      border-top: none; }
+  .user-items .icon-order, .user-items .icon-programme, .user-items .icon-share, .user-items .icon-help, .user-items .icon-aboutus {
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+    background-image: url(../img/usercenter/ic_order.png);
+    vertical-align: -6px; }
+  .user-items .icon-programme {
+    background-image: url(../img/usercenter/ic_programme.png); }
+  .user-items .icon-share {
+    background-image: url(../img/usercenter/ic_share.png); }
+  .user-items .icon-help {
+    background-image: url(../img/usercenter/ic_help.png); }
+  .user-items .icon-aboutus {
+    background-image: url(../img/usercenter/ic_aboutus.png); }
+  .user-items .icon {
+    color: #bbb;
+    font-size: 20px; }
+
+.share-layer {
+  dislay: box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  box-align: end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 98;
+  background: rgba(0, 0, 0, 0.3); }
+  .share-layer .row {
+    padding: 20px 60px;
+    background: #fff; }
+    .share-layer .row .col {
+      text-align: center; }
+      .share-layer .row .col img {
+        width: 50px; }
+
+.user-msg {
+  background: #f4f4f4; }
+  .user-msg .item {
+    padding: 20px;
+    color: #999;
+    font-size: 16px; }
+    .user-msg .item:first-child {
+      padding: 16px 20px; }
+      .user-msg .item:first-child .item-note {
+        margin-top: 24px; }
+    .user-msg .item .item-note {
+      font-size: 16px; }
+      .user-msg .item .item-note.show-val {
+        font-size: 18px;
+        color: #333; }
+      .user-msg .item .item-note .icon {
+        color: #999; }
+  .user-msg .icon {
+    margin-left: 30px; }
+  .user-msg .user-photo {
+    width: 62px;
+    height: 62px;
+    border-radius: 31px;
+    vertical-align: middle; }
+  .user-msg .assertive-btn {
+    margin: 50px auto; }
+
+.set-username {
+  background: #f4f4f4; }
+  .set-username .assertive-btn {
+    margin: 35px auto; }
+
+.user-name-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 14px; }
+  .user-name-box img {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 40px; }
+  .user-name-box .name-des {
+    font-size: 14px;
+    color: #333; }
+    .user-name-box .name-des .u-name {
+      font-size: 17px; }
+    .user-name-box .name-des i {
+      margin-right: 12px; }
+  .user-name-box i.ion-iphone {
+    font-size: 25px;
+    color: #999;
+    vertical-align: middle; }
+
+.user-editor {
+  margin-top: 20px; }
+  .user-editor .item {
+    padding-top: 7px;
+    padding-bottom: 6px;
+    border-radius: 6px; }
+  .user-editor input {
+    font-size: 17px !important; }
+  .user-editor p {
+    padding-top: 7px;
+    font-size: 13px;
+    line-height: 22px; }
+
+.attention-list {
+  margin-bottom: 55px; }
+  .attention-list dt {
+    margin: 20px 0 8px;
+    font-size: 15px;
+    color: #666; }
+  .attention-list dd {
+    font-size: 13px;
+    padding-left: 20px;
+    line-height: 22px; }
+    .attention-list dd em {
+      margin-left: -20px; }
+
+.union-account {
+  background: #f4f4f4; }
+  .union-account .item {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #333; }
+    .union-account .item .item-note {
+      margin: 10px 30px 0;
+      font-size: 16px;
+      color: #999; }
+    .union-account .item .icon {
+      color: #bbb;
+      font-size: 20px; }
+
+.icon-qq, .icon-weixin, .icon-zfb {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  background-image: url(../img/usercenter/QQ.png);
+  vertical-align: -14px; }
+
+.icon-weixin {
+  background-image: url(../img/usercenter/weixin.png); }
+
+.icon-zfb {
+  background-image: url(../img/usercenter/zhifubao.png); }
+
+.password-wrapper {
+  position: relative; }
+  .password-wrapper .go-forgetpassword {
+    position: absolute;
+    top: 13px;
+    right: 45px;
+    z-index: 9; }
+
+.order-title {
+  padding-left: 20px;
+  line-height: 34px;
+  color: #666;
+  font-size: 14px;
+  background: #eee; }
+
+.order-list .nothing {
+  padding-top: 50px;
+  text-align: center; }
+  .order-list .nothing img {
+    margin-bottom: 10px;
+    width: 97px; }
+
+.order-list .c-row {
+  border-bottom: 1px solid #ddd; }
+  .order-list .c-row .col {
+    display: box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    box-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #333;
+    font-size: 16px; }
+    .order-list .c-row .col:first-child {
+      width: 40px;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 40px;
+      flex: 0 0 40px; }
+
+.order-list .lottery-name {
+  font-size: 16px;
+  white-space: nowrap; }
+
+.order-list .bonus-time {
+  padding-top: 6px;
+  font-size: 13px;
+  color: #999; }
+
+.order-list .box-center {
+  box-pack: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }

@@ -1,0 +1,32 @@
+<ion-view view-title="彩票开奖">
+    <set-time-out-load-img class="lottery" >
+        <ion-refresher
+                pulling-text="下拉刷新..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
+        <div class="off-line" ng-if="isOffLine">
+          网络连接失败,请检查网络!
+        </div>
+
+        <div class="list">
+            <a class="item item-input" ng-repeat="lottery in lotterys track by lottery.lotteryCode" ng-href="#/tab/lotterylist/{{lottery.lotteryCode}}">
+                <div class="lottery-img">
+                    <img _src="./img/lottery/{{lottery.lotteryCode}}.png" class="lottery-img"/>
+                </div>
+                <div class="lottery-issue item-input">
+                    <p class="lottery-name">{{lottery.lotteryName}}<em>{{lottery.issue | issuefixed}}期</em><span class="item-note"><time >{{lottery.bonusTime}}</time><span class="small-hide">{{lottery.bonusWeek}}</span></span></p>
+                    <div class="lottery-num" ng-if="lottery.bonusNumber"><em ng-repeat="bonusNumber in lottery.bonusNumber track by $index" ng-class="{'font-blue': bonusNumber.blueBool}">{{bonusNumber.blueBool ? bonusNumber.blueBool : bonusNumber }}</em></div>
+                    <div class="soon-bonus" ng-if="!lottery.bonusNumber">
+                        <span>
+                            今晚{{lottery.lotteryCode == '113' ? '8:30': (lottery.lotteryCode == '001' || lottery.lotteryCode == '110') ? '9:15' : lottery.lotteryCode == '004' ? '21:15' : '' }}开奖
+                        </span>
+                    </div>
+                </div>
+                <span class="item-note">
+                    <i class="icon ion-ios-arrow-forward " style="font-size: 30px; color: #bbb"></i>
+                </span>
+
+            </a>
+        </div>
+    </set-time-out-load-img>
+</ion-view>

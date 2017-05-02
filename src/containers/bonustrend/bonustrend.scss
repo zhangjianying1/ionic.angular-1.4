@@ -1,0 +1,532 @@
+@import '../../css/public.scss';
+
+// 公用
+.column-left-first{
+  width: 60px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  font-size: 12px;
+  white-space: nowrap;
+  &:nth-of-type(2n){
+    background: #f4f4f4;
+  }
+
+}
+.scroll-box{
+  overflow: auto;
+  overflow-x: scroll;
+  overflow-y:scroll;
+  -webkit-overflow-scrolling:touch;
+}
+// 底部选择栏
+.bonus-cycle-footer{
+  display: block;
+  position: fixed;
+  padding: 0;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  flex-direction: column;
+  transition: all 0.1s ease;
+  overflow: hidden;
+  .bonus-col{
+    border-top:1px solid #ddd;
+    border-bottom: none!important;
+
+  }
+  .scroll{
+    overflow: visible!important;
+  }
+  .column-left-first{
+    border-top:1px solid #ddd;
+    border-bottom: none;
+  }
+
+}
+.show-btn{
+  height: 44px;
+  padding: 2px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+  .icon-show-btn{
+    width: 23px;
+    height: 23px;
+    background-image: url(../img/down-show-btn.png);
+    transition: all 0.3s ease;
+    transform: rotate(180deg);
+    &.rotate180{
+      transform: rotate(0deg);
+    }
+  }
+}
+
+// 走势入口
+.bonus-entry{
+  background: #fff;
+  a.activated{
+    background: #f4f4f4;
+  }
+  .entry-list{
+    overflow: hidden;
+  }
+  .col{
+    width: 33.33333%;
+    padding: 0;
+    float: left;
+    text-align: center;
+    flex: inherit;
+    a{
+      padding: calculateSize(20px) 0;
+    }
+    img{
+      width: calculateSize(60px);
+    }
+    div{
+      color: #333;
+      font-size: 16px;
+    }
+  }
+}
+
+// end
+
+// 周期彩 begin
+.trend-scroll-style .scroll{
+  width: 100%;
+  padding-bottom: 82px;
+}
+.trend-column{
+  width: 100%;
+  font-size: 12px;
+  overflow: hidden;
+  .column-header{
+    position: relative;
+    z-index:9;
+    height: 34px;
+    .column-left-first{
+      background: #f4f4f4;
+      position: relative;
+      z-index:2;
+    }
+  }
+  .column-row{
+    display: box;
+    display: flex;
+  }
+
+  .column-body{
+    display: box;
+    display: flex;
+    background: #fff;
+
+
+  }
+  .column-left-other{
+    position: relative;
+    flex: 1;
+    flex-box: 1;
+    overflow: visible!important;
+  }
+}
+
+.bg-fdd9d9{
+  background: #FDD9D9!important;
+}
+.bg-FCF2CB{
+  background: #FCF2CB!important;
+}
+.bg-DEEEFF{
+  background: #DEEEFF!important;
+}
+.c-48D2A0{
+  color: #48D2A0!important;
+}
+.c-167CE8{
+  color: #167CE8;
+}
+
+.full-screen{
+   .bonus-col{
+    flex:1 1 auto;
+  }
+}
+.column-row{
+  display: box;
+  display: flex;
+}
+.bonus-row{
+  display: box;
+  display: flex;
+  overflow: visible!important;
+  &:nth-of-type(2n){
+    .bonus-col{
+      background: #f4f4f4;
+    }
+  }
+  &.blue-trend{
+    .show-ball{
+      background: $blue
+    }
+  }
+  .bonus-col{
+    display: box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-pack: center;
+    box-align: center;
+    width: 30px;
+    height: 34px;
+    flex-shrink: 0;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    color: #666;
+    text-align:center;
+    background: #fff;
+  }
+  .show-ball{
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    display: inline-block;
+    border-radius: 12px;
+    background: $red;
+    color: #fff;
+  }
+}
+canvas{
+  //transform: scale(.5, .5);
+  //transform-origin: 0 0;
+}
+
+
+
+// 周期彩 end
+
+
+// 排列三 or 3d begin
+.bonus-3d{
+
+}
+.select-num{
+  height: 68px !important;
+  .column-left-first{
+    height: 68px;
+    line-height: 68px;
+  }
+  .select-num-box{
+    flex: 1;
+    box-flex: 1;
+    overflow: hidden !important;
+    .bonus-row{
+      border-top: 1px solid #fff;
+    }
+  }
+}
+.select-num-box{
+  display: felx;
+  display: box;
+  display: -webkit-box;
+  flex-direction: column;
+  box-orient: vertical;
+  width: 100%;
+}
+// 排列三 or 3d end
+
+html{
+  overflow-y: auto;
+  background: #f4f4f4;
+
+}
+
+#chart{
+   position: static;
+   overflow-y: auto;
+
+   .bonus-cycle-footer{
+     .trend-column {
+       padding: 0!important;
+     }
+     .scroll{
+       transform: none;
+       -webkit-transform: none;
+     }
+   }
+   .bonus-trend {
+     padding-bottom: 42px;
+   }
+   .trend-column{
+     padding-top: 110px;
+     canvas{
+       margin-bottom: -6px;
+     }
+   }
+   .spinner{
+     display: block!important;
+   }
+   .column-scroll-x{
+     width: 100%;
+     overflow:hidden;
+     overflow-x: scroll!important;
+     -webkit-touch-scrolling: touch;
+     -webkit-transform: none!important;
+     transform: none!important;
+   }
+   .view-container,.scroll-content {
+
+     position: static !important;
+     width:100%;
+     height:100%;
+     background: #fff;
+     *{
+       overflow: hidden;
+     }
+     .bonus-trend *{
+       overflow: visible;
+     }
+   }
+   .bar-header{
+     width: 100%;
+     position:fixed;
+     top:0;
+   }
+   .pane{
+     position: static!important;
+     transform: none!important;
+     -webkit-transform: none!important;
+     overflow:hidden;
+   }
+   .tab-header-wrap{
+     width: 100%;
+     position: fixed;
+     top: 44px !important;
+     background: #fff;
+     overflow:hidden;
+     z-index:1;
+   }
+   .column-header{
+     position: fixed;
+     top: 77px !important;
+     width: 100%;
+     z-index:1;
+     overflow: visible!important;
+   }
+   .bonus-cycle-footer{
+     position: fixed;
+     bottom:0;
+   }
+   .scroll{
+     transform: none;
+     -webkit-transform:none;
+   }
+   &.platform-webview.platform-ios{
+     .tab-header-wrap{
+       top: 63px !important;
+     }
+     .column-header{
+       top: 96px !important;
+     }
+     .trend-column {
+       padding-top: 126px;
+     }
+     .group{
+       padding: 99px 0 48px;
+     }
+   }
+   .group{
+     padding: 77px 0 48px;
+   }
+
+ }
+ /*快三 beging*/
+.bouns-k3{
+  padding-top: 0!important;
+  background: #f4f4f4;
+}
+.group dl{
+  margin-bottom: 0;
+  overflow: hidden!important;
+  dt{
+    height: 34px;
+    line-height: 34px;
+    background: #FCF2CE;
+    text-align: center;
+    font-size: 15px;
+    color: #333;
+  }
+  dd{
+    padding-bottom: 15px;
+    background: #f4f4f4;
+
+  }
+}
+.block-box-list{
+  padding: 7.5px;
+  background: #fff;
+  overflow: hidden!important;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  li{
+    width: 50%;
+    padding: 7.5px ;
+    float: left;
+  }
+  .box{
+    height: 0;
+    position: relative;
+    padding-top: 90%;
+    background-image: url(../img/bonustrend/shaizi.png?1);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .label{
+    position: absolute;
+    top: -3%;
+    right: 6%;
+    width: 15%;
+    height: 35%;
+    padding:1% 0 0 1%;
+    line-height: 12px;
+    background-image: url(../img/bonustrend/label.png);
+    background-size: cover;
+    font-size: 11px;
+    color: #666;
+    text-align: center;
+
+  }
+  .bouns-num{
+    width: 100%;
+    position: absolute;
+    top: 8%;
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+
+  }
+  .bouns-msg{
+    width: 100%;
+    border: 1px solid #FCB7B7;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: absolute;
+    bottom:0;
+    left:0;
+    height: 58%;
+    background-color: #FCEBDA;
+    background-image: url(../img/bonustrend/jiangjin.png);
+    background-repeat: no-repeat;
+    background-position: 1% center;
+    background-size: 30% 64%;
+    .cash{
+      width: 33%;
+      padding-top: 12% ;
+      float: left;
+      color: #fff;
+      text-align: center;
+      em{
+        font-size:16px;
+        white-space: nowrap;
+      }
+
+
+    }
+    .msg-list{
+      height: 100%;
+      margin-left: 33%;
+      border-left: 1px solid #fff;
+    }
+    .msg-line{
+      height: 33.3333%;
+      padding: 12% 2%;
+      line-height: 33.3333%;
+      border-top: 1px solid #fff;
+      font-size: 11px;
+      color: #666;
+      em.item-note{
+        font-size: 14px;
+        color: #333;
+      }
+    }
+  }
+}
+// 底部浮动选择
+.group-more{
+  width: 100%;
+  height: 44px;
+  position: fixed;
+  bottom: 0px;
+  overflow: visible!important;
+}
+.group-header{
+  position: relative;
+  z-index: 8;
+  text-align: center;
+  line-height: 44px;
+  color: #333;
+  font-size: 15px;
+  background: #fff;
+}
+.icon-down-more{
+  width: 0;
+  height: 0;
+  border-bottom: 4px solid #999;
+  border-left: 4px solid #999;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  margin-left: 5px;
+  transform: rotate(-45deg);
+  vertical-align: 3px!important;
+  transition: all .2s linear;
+  &.direction-up{
+    transform: rotate(135deg);
+    vertical-align: -2px!important;
+  }
+}
+.group-title-list{
+  width: 100%;
+  padding: 7.5px;
+  background: #ddd;
+  position: absolute;
+  top:0;
+  transition: all .2s linear;
+  overflow: hidden;
+  div{
+    width: 33.33333%;
+    padding: 7.5px;
+    float: left;
+  }
+  em{
+    display: block;
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    font-size: 12px;
+    text-align: center;
+    color: #666;
+    background: #fff;
+    float: left;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    white-space: nowrap;
+    &.active{
+      border-color: $red;
+      color: $red;
+      background: #FFE7E7;
+    }
+  }
+}
+@media (max-width:360px) and (min-width: 320px){
+  .block-box-list {
+    .label {
+      line-height: 11px;
+      font-size: 10px;
+    }
+  }
+
+}
+
+ /*快三 end*/

@@ -1,0 +1,118 @@
+<ion-view view-title="{{bonusTitle}}走势图">
+    <ion-content overflow-scroll="true">
+        <div class="bonus-trend" >
+            <tabs index="default.index" class="shrink-box">
+                <tab title="基本趋势" >
+                  <div class="trend-column">
+                    <div class="column-header column-row">
+                      <div>
+                        <div class="column-left-first">
+                          期号
+                        </div>
+                      </div>
+                      <section class="column-left-other">
+                        <issue issue-data="[1,2,3,4,5,6,7,8,9,10,11]" />
+                      </section>
+                    </div>
+
+                    <bonus-full sign="def" issue-list="issueList"  is-full="true" ng-if="issueList.length"></bonus-full>
+
+                  </div>
+                </tab>
+                <tab title="前三直选">
+                    <div class="trend-column" >
+                        <div class="column-header column-row select-num" style="height:35px">
+                            <div>
+                              <div class="column-left-first">
+                                期号
+                              </div>
+                            </div>
+                          <section class="column-box">
+                            <div class="select-num-box" ng-repeat="i in ['一','二','三']">
+                              <div class="select-pick bg-fdd9d9">
+                                <em>
+                                  第{{i}}位
+                                </em>
+                              </div>
+                              <issue issue-data="[1,2,3,4,5,6,7,8,9,10,11]" />
+
+                            </div>
+
+                          </section>
+                        </div>
+
+                        <bonus-full style="padding-top: 34px" sign="three"  issue-list="issueList"   is-full="true" ng-if="issueList.length"></bonus-full>
+
+                    </div>
+                </tab>
+
+              <tab title="前二直选" >
+                <div class="trend-column" >
+                  <div class="column-header column-row select-num" style="height:35px">
+                    <div>
+                      <div class="column-left-first">
+                        期号
+                      </div>
+                    </div>
+                    <section class="column-box">
+                      <div class="select-num-box" ng-repeat="i in ['一','二']">
+                        <div class="select-pick bg-fdd9d9">
+                        <em>
+                          第{{i}}位
+                        </em>
+                        </div>
+                        <issue issue-data="[1,2,3,4,5,6,7,8,9,10,11]" />
+
+                      </div>
+
+                    </section>
+
+                  </div>
+
+                  <bonus-full style="padding-top: 34px" sign="two"  issue-list="issueList"   is-full="true" ng-if="issueList.length"></bonus-full>
+
+                </div>
+              </tab>
+
+              <tab title="前三组选" >
+                    <div class="trend-column">
+                        <div class="column-header column-row">
+                            <div>
+                              <div class="column-left-first">
+                                期号
+                              </div>
+                            </div>
+                            <section class="column-left-other">
+                              <issue issue-data="[1,2,3,4,5,6,7,8,9,10,11]" />
+                            </section>
+                        </div>
+
+                        <bonus-full sign="three_zx" issue-list="issueList"  is-full="true"  ></bonus-full>
+
+                    </div>
+                </tab>
+                <tab title="前二组选">
+
+                    <div class="trend-column">
+                        <div class="column-header column-row">
+                            <div>
+                                <div class="column-left-first">
+                                    期号
+                                </div>
+                            </div>
+                            <section class="column-left-other" >
+                              <issue issue-data="[1,2,3,4,5,6,7,8,9,10,11]" />
+                            </section>
+                        </div>
+                        <bonus-full sign="two_zx"  load-more="loadMore()" issue-list="issueList"  ng-if="issueList.length"></bonus-full>
+                    </div>
+                </tab>
+                </slide-tab>
+            </tabs>
+          <scroll-load ng-if="isMore" on-infinite="loadMore()" />
+        </div>
+        <show-more ng-class="{'full-screen': default.index == 0 || default.index == 1}"  sign-arr="['def', ['three1', 'three2', 'three3'], ['two1', 'two2'], 'three_zx', 'two_zx']" index="default.index" picker-val="default.pickerVal"></show-more>
+
+    </ion-content>
+
+</ion-view>

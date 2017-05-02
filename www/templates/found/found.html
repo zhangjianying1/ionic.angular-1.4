@@ -1,0 +1,76 @@
+<ion-view title="发现">
+    <ion-content class="found" overflow-scroll="false" has-bouncing="true">
+        <div class="list">
+            <a class="item item-input" ng-href="#/tab/foundlotterylist/{{bonus.lotteryCode}}">
+                <div class="found-img">
+                    <img ng-src="./img/found/ic_kaijang.png" class="found-img"/>
+                </div>
+
+                <div class="found-tit-box item-input">
+                    <div>
+                        <h3 class="found-name"><em>{{bonus.lotteryName}}{{bonus.issue}}期</em></h3>
+                        <div class="lottery-num" ><em ng-repeat="bonusNumber in bonus.bonusNumber track by $index" ng-class="{'font-blue': bonusNumber.blueBool}">{{bonusNumber.blueBool ? bonusNumber.blueBool : bonusNumber }}</em></div>
+                    </div>
+                </div>
+                <span class="item-note">
+                    <i class="icon ion-ios-arrow-forward " style="font-size: 30px; color: #bbb"></i>
+                </span>
+
+            </a>
+            <a class="item item-input" ng-href="#/tab/foundbonusentry">
+                <div class="found-img">
+                    <img ng-src="./img/found/ic_zoushi.png" class="found-img"/>
+                </div>
+                <div class="found-tit-box item-input">
+                    <div>
+                        <h3 class="found-name">走势图</h3>
+                        <div class="fonud-tit">
+                            基本走势、和值、跨度
+                        </div>
+                    </div>
+                </div>
+                <span class="item-note">
+                    <i class="icon ion-ios-arrow-forward " style="font-size: 30px; color: #bbb"></i>
+                </span>
+
+            </a>
+            <a class="item item-input" ng-href="#/tab/consult">
+                <div class="found-img">
+                    <img ng-src="./img/found/ic_zixun.png" class="found-img"/>
+                </div>
+                <div class="found-tit-box item-input">
+                    <div>
+                        <h3 class="found-name">资讯</h3>
+                        <div class="fonud-tit">
+                            头条推荐、热点话题
+                        </div>
+                    </div>
+
+                </div>
+                <span class="item-note">
+                    <i class="icon ion-ios-arrow-forward " style="font-size: 30px; color: #bbb"></i>
+                </span>
+
+            </a>
+            <a class="item item-input" ng-href="#/tab/notice">
+                <div class="found-img">
+                    <img ng-src="./img/found/ic_xiaoxi.png" class="found-img"/>
+                </div>
+                <div class="found-tit-box item-input">
+                    <div>
+                        <h3 class="found-name">消息公告</h3>
+                        <div class="fonud-tit">
+                            最新通知
+                        </div>
+                    </div>
+
+                </div>
+                <span class="item-note">
+                    <i class="icon ion-ios-arrow-forward " style="font-size: 30px; color: #bbb"></i>
+                </span>
+
+            </a>
+
+        </div>
+    </ion-content>
+</ion-view>

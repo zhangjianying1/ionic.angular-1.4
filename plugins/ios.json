@@ -1,0 +1,71 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-hot-code-push-plugin": {
+            "PACKAGE_NAME": "com.icaimi"
+        },
+        "cordova-plugin-camera": {
+            "CAMERA_USAGE_DESCRIPTION": " ",
+            "PHOTOLIBRARY_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "com.icaimi"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.icaimi"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.icaimi"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.icaimi"
+        },
+        "cordova-plugin-file-opener2": {
+            "PACKAGE_NAME": "com.icaimi"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.icaimi"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.icaimi"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.icaimi"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.icaimi"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.icaimi"
+        },
+        "cordova-plugin-wkwebview-engine": {
+            "PACKAGE_NAME": "com.icaimi"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.icaimi"
+        },
+        "jpush-phonegap-plugin": {
+            "API_KEY": "968d892ca7a3dbe0db74e7c9",
+            "PACKAGE_NAME": "com.icaimi"
+        },
+        "plugin-http": {
+            "PACKAGE_NAME": "com.icaimi"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "icaimi.com"
+        },
+        "cordova-plugin-wechat": {
+            "WECHATAPPID": "wxa9c5dc5645a782dc",
+            "PACKAGE_NAME": "com.icaimi"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.icaimi"
+        }
+    }
+}

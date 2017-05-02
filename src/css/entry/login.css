@@ -1,0 +1,142 @@
+.login-header {
+  height: 44px;
+  line-height: 44px;
+  font-size: 24px;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2222; }
+  .login-header div {
+    width: 44px;
+    padding-left: 15px;
+    vertical-align: middle; }
+
+body.platform-webview.platform-ios .login-header {
+  top: 22px; }
+
+.login {
+  background-image: url(../img/entry/login-bg.png);
+  background-size: cover; }
+  .login .list {
+    padding: 0 60px; }
+  .login .item-input-wrapper {
+    background-color: none !important; }
+  .login .item {
+    margin-top: 15px;
+    border-radius: 44px;
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    background-clip: padding-box;
+    overflow: hidden; }
+    .login .item em {
+      margin: 0 12px; }
+    .login .item input {
+      padding-left: 0;
+      color: #fff;
+      font-size: 16px;
+      border: none; }
+    .login .item .icon-lock {
+      margin-left: -8px; }
+  .login .assertive-btn {
+    width: 100%;
+    margin: 0 auto 8px; }
+
+.logo {
+  padding: 70px 0 35px;
+  text-align: center; }
+  .logo img {
+    width: 150px;
+    height: 70px; }
+
+.icon-mobile, .icon-lock {
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/entry/ic_phone.png); }
+
+.icon-lock {
+  background-image: url(../img/entry/ic_lock.png); }
+
+.forget-password {
+  margin: 10px 0 22px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px; }
+  .forget-password a {
+    color: #bdb9ba; }
+
+.union-popup {
+  margin: 0 10px 5px; }
+  .union-popup input {
+    width: 100px !important; }
+
+.union-login {
+  margin-top: 32px; }
+  .union-login .union-tit {
+    display: box;
+    display: -webkit-box;
+    height: 30px;
+    box-align: center;
+    margin-bottom: 14px; }
+    .union-login .union-tit div {
+      -webkit-box-flex: 1;
+      box-flex: 1;
+      height: 1px;
+      margin: 0 15px;
+      background: #736d6d;
+      overflow: hidden; }
+    .union-login .union-tit h3 {
+      width: 135px;
+      line-height: 2px;
+      margin: 0;
+      text-align: center;
+      font-size: 15px;
+      color: #bbb;
+      text-align: center; }
+  .union-login .col {
+    text-align: center; }
+    .union-login .col img {
+      width: 40px; }
+
+.register {
+  margin-top: -14px; }
+  .register .register-btn {
+    height: 50px;
+    width: 80%;
+    margin: 30px auto 11px; }
+  .register .item-input-inset {
+    padding-top: 7px;
+    padding-bottom: 7px; }
+  .register .item {
+    margin: 34px 0 0;
+    border-radius: 8px; }
+  .register .send-btn {
+    margin-right: 10px; }
+  .register .service-tips {
+    margin-top: 10px; }
+
+.sended-tips {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  z-index: 90; }
+
+.set-password .item, .reset-password .item {
+  margin-bottom: 25px;
+  border-radius: 8px;
+  color: #333 !important;
+  font-size: 15px !important; }
+
+.set-password .assertive-btn, .reset-password .assertive-btn {
+  margin: 28px auto; }
+
+.password-tips {
+  height: 35px;
+  margin: 0;
+  line-height: 35px;
+  text-align: center;
+  font-size: 14px;
+  color: #ff5558;
+  background: #fff3dd; }
+
+.reset-password .service-tips {
+  margin-top: -15px; }

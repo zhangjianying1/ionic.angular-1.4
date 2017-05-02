@@ -1,0 +1,88 @@
+<ion-view view-title="我的优惠券">
+    <ion-content overflow-scroll="true" style="overflow: hidden" has-bouncing="true">
+        <slide-tabs index="default.index" is-scroll="true">
+            <slide-tab title="未使用" >
+              <dorp-down fn="doRefreshNoUse()" >
+                  <div class="coupon-cont">
+                      <ul class="coupon-list" >
+                          <li class="coupon-box" ng-repeat="data in noUse.data">
+                              <strong class="term-prompt" ng-if="data.status == 1">快过期</strong>
+                              <div class="coupon-des">
+                                  <h2>{{data.couponValue | parseInt}}  <em class="fs-14">米币</em></h2>
+                                  <div class="fs-14">满{{data.amountCond}} 米币可用</div>
+                                  <p>{{data.condDesc}}<i class="ion ion-ios-information-outline"></i></p>
+                              </div>
+                              <div class="coupon-term">
+                                  <div>有效期<br/>{{data.startTime | datetransfer}}-{{data.endTime | datetransfer}}</div>
+                                  <div class="term-date">还要{{data.leftDay}}天到期</div>
+                              </div>
+                          </li>
+
+                      </ul>
+                      <div class="nothing" ng-if="!noUse.isMore && noUse.data.length == 0">
+                          <img src="./img/usercenter/ic_youhuiquan.png" />
+                          <p>您还没有优惠券哦!</p>
+                      </div>
+                  </div>
+                  <ion-infinite-scroll on-infinite="loadNoUse()" ng-if="noUse.isMore" class="infinite"> </ion-infinite-scroll>
+              </dorp-down>
+            </slide-tab>
+            <slide-tab title="已使用" >
+
+
+              <dorp-down fn="doRefreshUsed()" >
+
+                  <div class="coupon-cont">
+                      <ul class="coupon-list" >
+                          <li class="coupon-box disabled used-coupon" ng-repeat="data in used.data">
+                              <div class="coupon-des">
+                                  <h2>{{data.couponValue  | parseInt}}  <em class="fs-14">米币</em></h2>
+                                  <div class="fs-14">满{{data.amountCond}} 米币可用</div>
+                              </div>
+                              <div class="coupon-term">
+                                  <div>使用时间<br/>{{data.useTime || '-'}}</div>
+                                  <div>有效期<br/>{{data.startTime + '-' + data.endTime}}</div>
+                              </div>
+                          </li>
+
+                          `
+                      </ul>
+                      <div class="nothing" ng-if="!used.isMore && used.data.length == 0">
+                          <img src="./img/usercenter/ic_youhuiquan.png" />
+                          <p>您还没有使用优惠券哦!</p>
+                      </div>
+                      <ion-infinite-scroll on-infinite="loadUsed()" distance="1%" ng-if="used.isMore" class="infinite"> </ion-infinite-scroll>
+                  </div>
+              </dorp-down>
+
+            </slide-tab>
+            <slide-tab title="已过期" >
+
+
+              <dorp-down fn="doRefreshOverdue()">
+
+                  <div class="coupon-cont">
+                      <ul class="coupon-list">
+                          <li class="coupon-box disabled overdue-coupon" ng-repeat="data in overdue.data">
+                              <div class="coupon-des">
+                                  <h2>{{data.couponValue  | parseInt}}  <em class="fs-14">米币</em></h2>
+                                  <div class="fs-14">满{{data.amountCond}} 米币可用</div>
+                              </div>
+                              <div class="coupon-term">
+                                  <div>有效期<br/>{{data.startTime + '-' +  data.endTime}}</div>
+                              </div>
+                          </li>
+                      </ul>
+                      <div class="nothing" ng-if="!overdue.isMore && overdue.data.length == 0">
+                          <img src="./img/usercenter/ic_youhuiquan.png" />
+                          <p>您还没有过期的优惠券哦!</p>
+                      </div>
+                  </div>
+                  <ion-infinite-scroll on-infinite="loadOverdue()" distance="1%" ng-if="overdue.isMore" class="infinite"> </ion-infinite-scroll>
+              </dorp-down>
+
+            </slide-tab>
+        </slide-tabs>
+
+    </ion-content>
+</ion-view>

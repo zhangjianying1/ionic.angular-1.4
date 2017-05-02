@@ -1,0 +1,14 @@
+<ion-view view-title="彩种定制">
+    <ion-content class="lottery-customize" overflow-scroll="false" has-bouncing="true">
+
+        <div class="list">
+            <div class="item item-box" ng-repeat="lottery in lotteryList track by lottery.lotteryCode">
+
+                <img src="{{'./img/lottery/' + lottery.lotteryCode+ '.png'}}" />
+                <div class="item-box-flex-1">{{lottery.lotteryName}}</div>
+                <i class="icon icon-add" ng-class="{true: 'icon-selected'}[lottery.status == 1]" on-tap="toggleHandle(lottery.lotteryCode, lottery.status)"></i>
+            </div>
+         </div>
+
+    </ion-content>
+</ion-view>

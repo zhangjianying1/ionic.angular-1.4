@@ -1,0 +1,33 @@
+/* 下拉 begin */
+.dorp-down{
+  width:100%;
+}
+.dorp-down .up-load{
+  width:100%;
+  height: 68px;
+  position:absolute;
+}
+.dorp-down .up-load{
+  top:-68px;
+}
+
+
+.dorp-down .up-load span{
+  display:block;
+  width: 28px;
+  height: 28px;
+  margin: 20px auto 0;
+  transition: all .3s;
+  background-image: url(../../../images/pull_up_icon.png);
+  background-size: cover;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.dorp-down .up-load span.loading{
+  background-image: url(../../../images/loading_icon.png);
+
+}
+/* 下拉 end */

@@ -1,0 +1,72 @@
+    <ion-view view-title="首页" >
+    <set-time-out-load-img class="bg-f4">
+        <!--<ion-refresher-->
+                <!--pulling-text="下拉刷新...."-->
+                <!--on-refresh="doRefresh()">-->
+        <!--</ion-refresher>-->
+
+        <div class="index">
+            <div style="height:{{banHeight}}">
+              <ion-slide-box class="slide-img"  ng-if="adList">
+                <ion-slide ng-repeat="ad in adList track by ad.H5Url" repeat-finish="repeatFinish()" style="height:{{banHeight}}">
+                  <div class="box" >
+                    <a ng-href={{ad.h5Url}}>
+                      <img _src={{ad.imgUrl}} />
+                    </a>
+                  </div>
+                </ion-slide>
+              </ion-slide-box>
+            </div>
+
+            <!--<div class="notices">-->
+                <!--<a href="#/tab/sign"><i class="icon-notices"></i>签到领优惠券，每天三次抽券机会</a>-->
+            <!--</div>-->
+            <div class="row child-channel">
+                <div class="col">
+                    <a href="#/tab/lottery">
+                        <img _src="./img/index/ic_kaijang.png" />
+                        <h3>开奖</h3>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#/tab/bonusentry">
+                        <img _src="./img/index/ic_zoushi.png" />
+                        <h3>走势图</h3>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#/tab/sign">
+                        <img _src="./img/index/ic_qiandao.png" />
+                        <h3>签到领券</h3>
+                    </a>
+                </div>
+            </div>
+            <dl class="lottery-channel">
+                <dt><i class="icon-red-block"></i>彩种列表</dt>
+                <dd>
+                    <div class="lottery-channel-list" >
+                        <div class="col" ng-repeat="lottery in lotteryList track by lottery.lotteryCode" ng-if="lottery.status == 1" repeat-finish="repeatFinish()">
+                            <a ng-init="lotteryCode = lottery.lotteryCode;path=(lotteryCode == '001' || lotteryCode == '113') ?
+                            'bonuscycle' : (lotteryCode == '002' || lotteryCode == '108') ?
+                            'bonus3d' : (lotteryCode == '109' || lotteryCode == '110') ?
+                            'bonusPAILIEWU' : (lotteryCode == '004') ?
+                            'bonusQILECAI' :  (lottery.lotteryCode != '018' || lottery.lotteryCode != '011' || lottery.lotteryCode != '010' || lottery.lotteryCode != '015') ?
+                            'bonusKUAISAN' : ''"
+                               ng-href="{{'#/tab/' + path + '/' + lotteryCode}}">
+                                <img _src="{{'./img/lottery/' + lotteryCode +'.png'}}" />{{lottery.lotteryName}}
+                            </a>
+                        </div>
+
+                        <div class="col">
+                            <a href="#/tab/lotterycustomize">
+                                <img _src="./img/index/dingzhi.png" />定制彩种
+                            </a>
+
+                        </div>
+
+                    </div>
+                </dd>
+            </dl>
+        </div>
+    </set-time-out-load-img>
+</ion-view>

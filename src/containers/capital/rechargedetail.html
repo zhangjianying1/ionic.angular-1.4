@@ -1,0 +1,45 @@
+<ion-view view-title="失败详情">
+    <ion-content class="padding-20 bg-f4" overflow-scroll="false" has-bouncing="true">
+        <div class="recharge-detail">
+            <div class="re-hader">
+                <img src="./img/usercenter/pic_mibi.png" />
+                <h5>米币充值</h5>
+            </div>
+                <div class="re-bloack">
+                    <div class="re-item ">
+                        <span>充值数量(米币)</span> +{{rechargeData.mcoin || number}}
+                    </div>
+
+                </div>
+                <div class="re-bloack">
+                    <div class="re-item ">
+                        <p>
+                            <span>支付渠道</span> {{rechargeData.fillResourcesDesc}}
+                        </p>
+                        <p>
+                            <span>支付金额</span> {{rechargeData.amount}}
+
+                        </p>
+                        <p>
+                            <span>充值流水号</span> {{rechargeData.orderId}}
+
+                        </p>
+                        <p>
+                            <span>处理时间</span> {{rechargeData.acceptTime}}
+
+                        </p>
+                    </div>
+
+                    <div class="re-item top-border">
+                        <span>失败原因</span> {{rechargeData.memo}}
+                    </div>
+
+                </div>
+            <div class="re-bottom-border"></div>
+        </div>
+        <div class="re-d-tel">
+            <a href="tel:400-6666-780">客服电话 <span class="c-red">400-6666-780</span></a>
+        </div>
+    </ion-content>
+
+</ion-view>

@@ -1,0 +1,44 @@
+<ion-view view-title="个人资料">
+    <ion-content class="user-msg">
+        <div class="list">
+            <a class="item" href="#/tab/userphoto">
+                <img class="user-photo" ng-src="{{userData.headImgUrl ? userData.headImgUrl : './img/usercenter/userphoto.png'}}" />
+                <span class="item-note">
+                    头像<i class="icon ion-ios-arrow-forward"></i>
+                </span>
+            </a>
+            <a class="item" ng-href="{{userData.memberName ? '' : '#/tab/username' }}">
+                <span class="n-name">用户名</span>
+                <span class="item-note" ng-class="{true: 'show-val'}[!!userData.memberName]">
+                  {{userData.memberName ? userData.memberName: '设置'}}
+                    <i class="icon ion-ios-arrow-forward"></i>
+                </span>
+            </a>
+            <a class="item" ng-href="{{userData.mobile ? '' : '#/tab/usermobile' }}">
+                <span class="n-name">手机号码</span>
+                <span class="item-note"  ng-class="{true: 'show-val'}[!!userData.mobile]">
+                    {{userData.mobile ? userData.mobile : '去绑定'}}
+                    <i class="icon ion-ios-arrow-forward"></i>
+                </span>
+            </a>
+            <a class="item" ng-href="#/tab/{{userData.setPassword == 1 ? 'modifypassword' : 'setpassword'}}">
+                <span class="n-name">密码管理</span>
+
+                <span class="item-note"  ng-class="{true: 'show-val'}[!!userData.password]">
+               {{userData.setPassword == 1 ? '修改' : '设置'}}
+                    <i class="icon ion-ios-arrow-forward"></i>
+                </span>
+            </a>
+            <!--<a class="item" href="#/tab/userunion">-->
+                <!--<span class="n-name">联合账户绑定</span>-->
+                <!--<span class="item-note">-->
+                  <!--设置<i class="icon ion-ios-arrow-forward"></i>-->
+                <!--</span>-->
+            <!--</a>-->
+        </div>
+        <div>
+
+            <button class="assertive-btn" ng-click="outLogin()">退出登录</button>
+        </div>
+    </ion-content>
+</ion-view>

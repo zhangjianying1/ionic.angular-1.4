@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+
+    }
+    .header{
+      width:100%;
+      position: absolute;
+      height: 49px;
+      line-height: 49px;
+      text-align: center;
+      color: #fff;
+      font-size: 20px;
+      background: #ff3939;
+    }
+    p{
+      padding: 60px;
+      text-align: center;
+    }
+    form, input{
+      height: 200px;
+      width: 300px;
+      opacity:0
+    }
+  </style>
+</head>
+<body>
+<div class="header">充值</div>
+  <p>检测当前环境安全,正在跳转...</p>
+  <form method="POST">
+    <input type="text" name="req_data" value='' />
+  </form>
+  <script>
+    setTimeout(function(){
+
+      var oForm = document.forms[0],
+        result = {},
+        oInput = oForm.querySelector('input'),
+        queryArr = location.search.substring(1).split('&');
+
+      for (var i = 0; i < queryArr.length; i ++) {
+        var str = queryArr[i];
+        var keyIndexEnd = str.indexOf('=');
+        result[str.substring(0, keyIndexEnd)] = str.substring(keyIndexEnd + 1);
+      }
+
+
+      oForm.action = result.requestUrl;
+
+      oInput.value = decodeURI(result.req_data);
+
+//      for (var i in result) {
+//
+//        if (i != 'requestUrl' && i != '') {
+//          oInput = document.createElement('input');
+//          oInput.setAttribute('name', [i]);
+//          oInput.setAttribute('value', result[i]);
+//          oForm.appendChild(oInput);
+//
+//        }
+//      }
+
+
+
+
+        oForm.submit();
+
+    }, 2000)
+
+  </script>
+</body>
+</html>

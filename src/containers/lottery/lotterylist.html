@@ -1,0 +1,65 @@
+<ion-view view-title={{lotteryTitle}}>
+
+    <ion-nav-buttons side="right" >
+      <a href="#/tab/{{pathName}}calculate/{{lotteryCode}}" class="icon-calculate" ng-if="lotteryCode == '113' || lotteryCode == '001'"></a>
+    </ion-nav-buttons>
+    <ion-content class="lottery-list" overflow-scroll="false" has-bouncing="true">
+        <ion-refresher
+                pulling-text="下拉刷新..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
+        <div class="off-line" ng-if="isOffLine">
+          网络连接失败,请检查网络!
+        </div>
+        <toggle-panel class="list">
+            <panel class="item" ng-repeat="lottery in lotteryList track by lottery.issue">
+                <div class="lottery-list-box item-input">
+                    <div class="lottery-issue">
+                        <p class="lottery-issue-time"><em>第{{lottery.issue}}期 </em>{{lottery.bonusTime}}</p>
+                        <div class="item-input lottery-dice" ng-if="lottery.lotteryClass == 'GP_K3'">
+                            <img ng-src="./img/lottery/{{bonusNumber}}.png" ng-repeat="bonusNumber in lottery.bonusNumber track by $index"/>和值：{{lottery.bonusNumber | reduce}}
+                        </div>
+                        <div class="lottery-num" ng-if="lottery.lotteryClass != 'GP_K3'">
+                            <em ng-repeat="bonusNumber in lottery.bonusNumber track by $index" ng-class="{'font-blue': bonusNumber.blueBool}">{{bonusNumber.blueBool ? bonusNumber.blueBool : bonusNumber }}</em>
+                        </div>
+
+                        <div class="soon-bonus" ng-if="!lottery.bonusNumber && lottery.lotteryCode == '001'"><span>今晚 21:15 开奖</span>周二、周四、周日开奖</div>
+                        <div class="soon-bonus" ng-if="!lottery.bonusNumber && lottery.lotteryCode == '113'"><span>今晚 8:30 开奖</span>周一、周三、周六开奖</div>
+                        <div class="soon-bonus" ng-if="!lottery.bonusNumber && lottery.lotteryCode == '110'"><span>今晚 8:30 开奖</span>周二、周五、周日开奖</div>
+                        <div class="soon-bonus" ng-if="!lottery.bonusNumber && (lottery.lotteryCode == '004')"><span>今晚 21:15 开奖</span>周一、周三、周五开奖</div>
+                    </div>
+
+                    <div class="lottery-bonus" ng-if="lottery.bonusNumber && lottery.lotteryClass != 'GP_K3'">
+                        <dl>
+                            <dt class="item-input bonus-header">
+                                <div>本期销量（元）</div>
+                                <div ng-if="lottery.prizePool > 0">奖池奖金（元）</div>
+                            </dt>
+                            <dd class="item-input bonus-full">
+                                <div class="c-red ">{{lottery.saleAmount | number}}</div>
+                                <div class="c-red " ng-if="lottery.prizePool > 0">{{lottery.prizePool | number}}</div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt class="item-input bonus-header">
+                            <div>奖项</div>
+                            <div>中奖注数</div>
+                            <div>每注奖金（元）</div>
+                            </dt>
+                            <dd class="item-input bouns-msg" ng-repeat="bounsLevel in lottery.bonusLevelList track by $index">
+                                <div>{{bounsLevel.name}}</div>
+                                <div>{{bounsLevel.num | number}}</div>
+                                <div class="c-red">{{bounsLevel.amount | number}}</div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <span class="item-note" ng-if="lottery.bonusNumber && lottery.lotteryClass != 'GP_K3'">
+                    <i class="icon ion-ios-arrow-forward " style="font-size: 30px; color: #bbb"></i>
+                </span>
+            </panel>
+        </toggle-panel>
+
+        <ion-infinite-scroll on-infinite="loadMore()" distance="1%" ng-if="isMore" > </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

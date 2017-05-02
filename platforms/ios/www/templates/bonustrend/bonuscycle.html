@@ -1,0 +1,61 @@
+<ion-view view-title="{{bonusTitle}}走势图" class="cle">
+    <ion-content overflow-scroll="true" >
+
+        <div class="bonus-cycle bonus-trend" >
+
+            <tabs index="default.index" is-header-bor="true">
+                <tab title="红球" >
+
+                    <div class="trend-column">
+                        <div class="column-header" >
+                            <div class="f-l">
+                                <div class="column-left-first">
+                                    期号
+                                </div>
+                            </div>
+                            <section class="column-left-other">
+                                <div class="bonus-row">
+                                    <div class="bonus-col bg-fdd9d9" ng-repeat="i in default.digitArr track by $index">
+
+                                        {{$index+1}}
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                        <bonus-full   sign="red" index="{{default.index == 0}}" issue-list="issueList" ng-if="issueList.length"></bonus-full>
+                    </div>
+                </tab>
+                <tab title="蓝球"  class="blue-trend">
+                    <div class="trend-column" ng-init="digitArr=(default.digitArr.length == 35 ? [0,1,2,3,4,5,6,7,8,9,10,11] : [0,1,2,3,4,5,6,7,8,9,10,11,12, 13,14,15])" >
+
+                        <div class="column-header">
+                            <div class="f-l">
+                                <div class="column-left-first" >
+                                    期号
+                                </div>
+                            </div>
+                            <section class="column-left-other">
+
+                                <div class="bonus-row" ng-class="{'full-screen': default.remnantW > digitArr.length*30}">
+                                    <div class="bonus-col bg-fdd9d9"  ng-repeat="i in digitArr track by $index" >
+                                        <span>
+                                            {{$index+1}}
+                                        </span>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                        <bonus-full  issue-list="issueList"  sign="blue"  ng-if="issueList.length"></bonus-full>
+                    </div>
+                </tab>
+            </tabs>
+          <scroll-load ng-if="isMore"  on-infinite="loadMore()"  />
+        </div>
+
+
+      <show-more sign-arr="['red', 'blue']" index="default.index" ></show-more>
+
+    </ion-content>
+</ion-view>

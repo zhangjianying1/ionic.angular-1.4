@@ -1,0 +1,201 @@
+@import '../../css/public.scss';
+
+//登录 begin
+.login-header{
+  height: 44px;
+  line-height: 44px;
+  font-size: 24px;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:2222;
+  div{
+    width: 44px;
+    padding-left: 15px;
+    vertical-align: middle;
+  }
+
+}
+body.platform-webview.platform-ios{
+  .login-header{
+    top: 22px;
+  }
+}
+.login{
+  background-image: url(../img/entry/login-bg.png);
+  background-size: cover;
+
+  .list{
+    padding: 0 60px;
+  }
+  .item-input-wrapper{
+    background-color: none!important;
+  }
+  .item{
+    margin-top: 15px;
+    border-radius: 44px;
+    background-color: rgba(0,0,0,.2) !important;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    overflow: hidden;
+    em{
+      margin: 0 12px;
+    }
+    input{
+      padding-left:0;
+      color: #fff;
+      font-size: 16px;
+      border: none;
+
+    }
+    .icon-lock{
+      margin-left: -8px;
+    }
+  }
+  .assertive-btn{
+    width: 100%;
+    margin: 0 auto 8px;
+  }
+}
+.logo{
+  padding: 70px 0 35px;
+  text-align: center;
+
+  img{
+    width: 150px;
+    height: 70px;
+  }
+}
+.icon-mobile{
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/entry/ic_phone.png);
+
+}
+.icon-lock{
+  @extend .icon-mobile;
+  background-image: url(../img/entry/ic_lock.png);
+
+}
+.forget-password{
+  margin: 10px 0 22px;
+
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  a{
+    color: #bdb9ba;
+  }
+}
+.union-popup {
+  margin: 0 10px 5px;
+  input {
+    width: 100px!important;
+  }
+}
+
+.union-login{
+  margin-top: 32px;
+  .union-tit{
+    display: box;
+    display: -webkit-box;
+    height: 30px;
+    box-align: center;
+    margin-bottom: 14px;
+    div{
+      -webkit-box-flex: 1;
+      box-flex: 1;
+      height:1px;
+      margin: 0 15px;
+      background: #736d6d;
+      overflow: hidden;
+
+    }
+
+    h3{
+      width:135px;
+      line-height: 2px;
+      margin:0;
+      text-align: center;
+      font-size: 15px;
+      color: #bbb;
+      text-align: center;
+    }
+  }
+
+  .col{
+    text-align: center;
+    img{
+      width: 40px;
+    }
+  }
+}
+// 登录end
+// 注册begin
+.register{
+  margin-top: -14px;
+  .register-btn{
+    height: 50px;
+    width: 80%;
+    margin: 30px auto 11px;
+  }
+  .item-input-inset{
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  .item{
+    margin: 34px 0 0;
+    border-radius: 8px;
+  }
+  .send-btn{
+    margin-right: 10px;
+  }
+  .service-tips{
+    margin-top: 10px;
+  }
+}
+.sended-tips{
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  z-index:90;
+}
+
+// 注册end
+// 设置密码begin
+.set-password{
+  .item{
+    margin-bottom: 25px;
+    border-radius: 8px;
+    color: #333!important;
+    font-size: 15px!important;
+  }
+  .assertive-btn{
+    margin: 28px auto;
+
+  }
+}
+.password-tips{
+  height: 35px;
+  margin: 0;
+  line-height: 35px;
+  text-align: center;
+  font-size: 14px;
+  color: #ff5558;
+  background: #fff3dd;
+}
+
+// 设置密码end
+
+// 重置密码start
+.reset-password{
+  @extend .set-password;
+  .service-tips{
+    margin-top: -15px;
+  }
+
+}
+
+
+// 重置密码end

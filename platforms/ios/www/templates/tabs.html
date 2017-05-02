@@ -1,0 +1,30 @@
+
+<ion-tabs class="tabs-icon-top tabs-color-active-positive" ng-class="{'hide-tab-nav': isHideTab}">
+  <style>
+      .tab-nav a:nth-of-type(5){
+          position: absolute;
+          visibility: hidden;
+      }
+  </style>
+  <!-- Dashboard Tab -->
+  <ion-tab title="首页"  icon-off="icon-house" icon-on="icon-house" href="#/tab/index">
+    <ion-nav-view name="tab-index"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Chats Tab -->
+  <ion-tab title="方案" icon-off="icon-programme" on-select="onTabSelected(1)" icon-on="icon-programme" href="#/tab/programme">
+    <ion-nav-view name="tab-programme"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Account Tab -->
+  <ion-tab title="发现" icon-off="icon-find" icon-on="icon-find" href="#/tab/found">
+    <ion-nav-view name="tab-found"></ion-nav-view>
+  </ion-tab>
+    <!-- Account Tab -->
+  <ion-tab title="我" icon-off="icon-usercenter" icon-on="icon-usercenter" href="#/tab/account">
+      <ion-nav-view name="tab-account"></ion-nav-view>
+  </ion-tab>
+  <ion-tab title="我" icon-off="icon-usercenter" icon-on="icon-usercenter" href="#/tab/login">
+      <ion-nav-view name="tab-login"></ion-nav-view>
+  </ion-tab>
+</ion-tabs>

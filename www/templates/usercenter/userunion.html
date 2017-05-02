@@ -1,0 +1,25 @@
+<ion-view view-title="联合账户">
+    <ion-content class="union-account">
+        <div class="list">
+            <a class="item item-icon-left item-icon-right" href="" ng-click="bindAccount('zfb')">
+                <i class="icon-qq"></i>
+                QQ
+                <i class="icon ion-ios-arrow-forward"></i>
+            </a>
+            <a class="item item-icon-left item-icon-right" href="" ng-click="bindAccount('zfb')">
+                <i class="icon-weixin"></i>
+                微信
+                <i class="icon ion-ios-arrow-forward"></i>
+            </a>
+            <a class="item item-icon-left item-icon-right" href="" ng-click="bindAccount('zfb')">
+                <i class="icon-zfb"></i>
+                支付宝
+                <span class="item-note" >
+                  {{bindData.zfb ? '解绑' : '绑定'}}
+
+                </span>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

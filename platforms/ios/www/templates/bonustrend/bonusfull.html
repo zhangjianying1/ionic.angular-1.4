@@ -1,0 +1,46 @@
+<div class="trend-column" set-height>
+    <div class="column-header column-row">
+
+        <div class="column-left-first">
+            期号
+        </div>
+        <div class="column-left-other">
+            <div class="bonus-row">
+                <div class="bonus-col bg-fdd9d9" ng-repeat="number in  [0,1,2,3,4,5,6,7,8,9] track by $index">
+                    <span>
+                        {{$index}}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ion-scroll direction="y" set-height class="trend-scroll-style" scrollbar-y="false" style="width: 100%" overflow-scroll='false'>
+
+
+
+        <div class="column-body">
+            <div class="">
+
+                <div class=" bg-eee column-left-first" ng-repeat="issue in issueList track by $index">
+                    {{issue.issue}}
+                </div>
+
+            </div>
+            <div class="column-left-other">
+                <div class="bonus-row" ng-repeat="issue in issueList track by $index">
+
+                    <div class="bonus-col" ng-repeat="number in issue.yiLou.zx track by $index">
+                                           <span  ng-class="{'show-ball': !number}">
+                                                {{number ? number : ($index+1)}}
+
+                                           </span>
+                    </div>
+
+                </div>
+                <ion-infinite-scroll on-infinite="loadMore(1)" distance="1%" ng-if="isMore" > </ion-infinite-scroll>
+
+            </div>
+        </div>
+
+    </ion-scroll>
+</div>

@@ -1,0 +1,368 @@
+// 用户中心begin
+.user-account{
+  //background-image: url(../img/usercenter/bg_wo.png);
+  //background-size: contain;
+  //background-repeat: no-repeat;
+}
+.user-bg{
+  position: relative;
+  background: #fff;
+  img{
+    width: 100%;
+  }
+}
+
+.show-name{
+  width: 100%;
+  position: absolute;
+  bottom: -9px;
+  text-align: center;
+
+  color: #fff;
+  h2{
+    color: #fff;
+    font-size: 22px;
+  }
+  .icon-mobile{
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
+    vertical-align: sub;
+  }
+  img{
+    height: 82px;
+    width: 82px;
+    margin-top: 40px;
+    border-radius: 41px;
+  }
+}
+
+body.platform-webview.platform-ios{
+  .show-name img{
+    margin-top: 17px;
+  }
+}
+.account-balance{
+  padding: 40px 3px 5px;
+  .col{
+    text-align: center;
+    padding:5px 0;
+    em{
+      color: #333;
+      font-size: 18px;
+    }
+    p{
+      color: #999;
+      font-size: 14px;
+    }
+    a{
+      border-right: 1px solid #ddd;
+    }
+    &:last-child a{
+      border: none;
+    }
+  }
+}
+.transaction{
+  padding: 5px 0 !important;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  background: #fff;
+  .col{
+    padding: 8px 0;
+    text-align: center;
+
+    &:last-child{
+      border-left: 1px solid #ddd;
+
+    }
+  }
+  .icon-recharge{
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    background-image: url(../img/usercenter/ic_recharge.png);
+    vertical-align: -6px;
+  }
+  .icon-exchange{
+    @extend .icon-recharge;
+    background-image: url(../img/usercenter/ic_exchange.png);
+  }
+}
+.user-items{
+  margin-top: 15px;
+  font-size: 16px;
+  color: #333;
+  .item{
+    &:nth-type-of(1){
+      border-top: none;
+    }
+    padding: 20px 23px;
+  }
+  .icon-order{
+    width: 24px;
+    height:24px;
+    margin-right: 20px;
+
+    background-image: url(../img/usercenter/ic_order.png);
+    vertical-align: -6px;
+  }
+  .icon-programme{
+    @extend .icon-order;
+    background-image: url(../img/usercenter/ic_programme.png);
+  }
+  .icon-share{
+    @extend .icon-order;
+    background-image: url(../img/usercenter/ic_share.png);
+  }
+  .icon-help{
+    @extend .icon-order;
+    background-image: url(../img/usercenter/ic_help.png);
+  }
+  .icon-aboutus{
+    @extend .icon-order;
+    background-image: url(../img/usercenter/ic_aboutus.png);
+  }
+  .icon{
+    color: #bbb;
+    font-size: 20px;
+  }
+}
+.share-layer{
+  dislay: box;
+  display: flex;
+  box-align: end;
+  align-items: flex-end;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 98;
+  background: rgba(0,0,0,.3);
+  .row{
+    padding: 20px 60px;
+    background: #fff;
+    .col{
+      text-align: center;
+      img{
+        width: 50px;
+      }
+    }
+  }
+
+}
+// 用户中心end
+
+// 用户资料 begin
+.user-msg{
+  background: #f4f4f4;
+  .item{
+    padding: 20px;
+    color: #999;
+    font-size: 16px;
+    &:first-child{
+      padding: 16px 20px;
+      & .item-note{
+        margin-top: 24px;
+      }
+    }
+    & .item-note{
+      font-size: 16px;
+      &.show-val{
+        font-size: 18px;
+        color: #333;
+      }
+      .icon{
+        color: #999;
+      }
+    }
+  }
+  .icon{
+    margin-left: 30px;
+  }
+  .user-photo{
+      width: 62px;
+      height: 62px;
+      border-radius: 31px;
+      vertical-align: middle;
+  }
+  .assertive-btn{
+    margin: 50px auto;
+  }
+
+}
+
+// 用户资料 end
+
+// 设置用户名 begin
+.set-username{
+  background: #f4f4f4;
+  .assertive-btn{
+    margin: 35px auto;
+
+  }
+}
+.user-name-box{
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+
+  img{
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 40px;
+  }
+  .name-des{
+    font-size: 14px;
+    color: #333;
+    .u-name {
+      font-size: 17px;
+
+    }
+    i {
+      margin-right: 12px;
+
+    }
+  }
+  i.ion-iphone{
+    font-size:25px;
+    color: #999;
+    vertical-align: middle;
+  }
+}
+.user-editor{
+  margin-top: 20px;
+  .item{
+    padding-top: 7px;
+    padding-bottom: 6px;
+    border-radius: 6px;
+  }
+  input{
+    font-size: 17px !important;
+  }
+  p{
+    padding-top: 7px;
+    font-size: 13px;
+    line-height: 22px;
+
+  }
+}
+// 设置用户名 end
+// 绑定手机号 beging
+.attention-list{
+  margin-bottom: 55px;
+  dt{
+    margin: 20px 0 8px;
+    font-size: 15px;
+    color: #666;
+  }
+  dd{
+    font-size: 13px;
+    padding-left: 20px;
+    line-height: 22px;
+    em{
+      margin-left: -20px;
+    }
+  }
+}
+// 绑定手机号 end
+
+// 联合账户 begin
+.union-account{
+  background: #f4f4f4;
+  .item{
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #333;
+    .item-note{
+      margin: 10px 30px 0;
+      font-size: 16px;
+      color: #999;
+    }
+    .icon{
+      color: #bbb;
+      font-size: 20px;
+    }
+  }
+}
+.icon-qq{
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  background-image: url(../img/usercenter/QQ.png);
+  vertical-align: -14px;
+}
+.icon-weixin{
+  @extend .icon-qq;
+  background-image: url(../img/usercenter/weixin.png);
+}
+.icon-zfb{
+  @extend .icon-qq;
+  background-image: url(../img/usercenter/zhifubao.png);
+}
+// 联合账户 end
+
+
+// 修改密码 begin
+.password-wrapper{
+  position: relative;
+  .go-forgetpassword{
+    position: absolute;
+    top: 13px;
+    right: 45px;
+    z-index:9;
+  }
+}
+// 修改密码 end
+
+// 订单列表 begin
+.order-title{
+  padding-left: 20px;
+  line-height: 34px;
+  color: #666;
+  font-size:14px;
+  background: #eee;
+}
+.order-list{
+  .nothing{
+    padding-top: 50px;
+    text-align: center;
+    img{
+      margin-bottom: 10px;
+      width: 97px;
+    }
+  }
+  .c-row {
+    border-bottom: 1px solid #ddd;
+    .col{
+      display: box;
+      display: flex;
+      box-align: center;
+      align-items: center;
+      color: #333;
+      font-size: 16px;
+      &:first-child{
+        width: 40px;
+        flex: 0 0 40px;
+      }
+    }
+  }
+  .lottery-name{
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  .bonus-time{
+    padding-top: 6px;
+    font-size: 13px;
+    color: #999;
+  }
+  .box-center{
+    box-pack: center;
+    justify-content: center;
+  }
+}
+// 订单列表 end

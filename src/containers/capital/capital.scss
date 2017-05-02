@@ -1,0 +1,173 @@
+@import '../../css/public.scss';
+
+
+
+// 优惠券 begin
+.coupon-cont{
+  padding: 0 10px;
+  .nothing{
+    padding-top: 50px;
+    text-align: center;
+    img{
+      width: 107px;
+    }
+  }
+}
+.coupon-box{
+  display: box;
+  display: flex;
+  margin-top: 24px;
+  background: $red;
+  border-radius: 10px;
+  position: relative;
+  color: #fff !important;
+  background-image: linear-gradient(-239deg, #ff505b 0%, #fe5667 30%,  #fe5667 40%, #ff6786 50%, #ff596d 80%, #ff5669 100% );
+  overflow: hidden;
+
+  // 制灰
+  &.disabled{
+    .coupon-des{
+      padding: 15px 0 14px 20px;
+      background: #bbb;
+    }
+    .coupon-term{
+      background: #d3d3d3;
+    }
+  }
+  // 已使用
+  &.used-coupon{
+    .coupon-term{
+      width: 170px;
+      padding-top: 12px;
+    }
+  }
+
+  // 快过期
+  &.overdue-coupon{
+    .coupon-term{
+      width: 148px;
+      padding-top: 35px;
+    }
+  }
+  .coupon-des{
+    padding: 8px 0 0 10px;
+    flex: 1;
+    box-flex: 1;
+    background-image: url(../img/usercenter/coupon-border.png);
+    background-size: 2px 5px;
+    background-repeat: repeat-y;
+    background-position: right;
+
+    h2{
+      font-size: 33px;
+      color: #fff;
+      white-space: nowrap;
+    }
+    .ion{
+      padding-left: 12px;
+      font-size: 20px;
+      vertical-align: sub;
+    }
+  }
+  .coupon-term{
+    width: 150px;
+    padding-top: 20px;
+    text-align: center;
+    .term-date{
+      margin-top: 15px;
+    }
+
+  }
+  .term-prompt{
+    padding: 0px 30px;
+    background: #E9C952;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transform: rotate(42deg);
+    transform: rotate(42deg);
+    -webkit-transform-origin: 53% 189%;
+    transform-origin: 58% 269%;
+    font-size: 12px;
+  }
+
+}
+// 优惠券 end
+
+// 余额 begin
+.balance-cont{
+  background: #f4f4f4;
+}
+.show-balance{
+  text-align: center;
+  background-image: linear-gradient(-90deg, #FAA482 0%, #FD657D 100%);
+  color: #fff;
+  .balance-tit{
+    padding-top: 16px;
+    font-size: 14px;
+    color: #fff;
+
+  }
+  .balance-cash{
+    padding: 15px 0 20px;
+    font-size: 32px;
+    span{
+      padding-left: 13px;
+    }
+  }
+  .balance-prompt{
+    height: 30px;
+    line-height: 30px;
+    background: rgba(0,0,0,.1);
+
+  }
+
+}
+.balance-info{
+  margin-top: 15px;
+  background: #fff;
+  font-size: 13px;
+  .info-list{
+    padding: 0 20px;
+  }
+  .row{
+
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: 1px solid #ddd;
+    margin-top: 0;
+  }
+  h4{
+    margin: 6px 0 4px;
+    font-size: 15px;
+    color: #333;
+  }
+  .cash-num{
+    padding-top: 21px;
+    font-size: 16px;
+    color: #333;
+    white-space: nowrap;
+  }
+  .nothing{
+    padding-top: 50px;
+    text-align: center;
+    img{
+      width: 107px;
+    }
+  }
+}
+// 余额 end
+
+@media (device-height:480px) and (-webkit-min-device-pixel-ratio:2){
+  .coupon-body .coupon-term{
+    width: 140px;
+  }
+
+}
+
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){
+  .coupon-body .coupon-term{
+    width: 140px;
+  }
+
+}

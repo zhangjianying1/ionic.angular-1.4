@@ -1,0 +1,28 @@
+<ion-view view-title="注册">
+    <!--<ion-nav-buttons side="right">-->
+        <!--<a href="#/tab/login" class="button button-clear button-positive" style="color: #fff">登录</a>-->
+    <!--</ion-nav-buttons>-->
+    <ion-content class="padding-20">
+        <form name="form"  ng-submit="formSub()" novalidate>
+            <div class="register list">
+                <sendcode mobile="inputData.mobile" func="register"></sendcode>
+
+                <label class="item item-input input-code">
+                    <my-input>
+                        <input type="text" ng-model="inputData.testCode" placeholder="输入验证码" maxlength="4" ng-maxlength="4" required />
+                    </my-input>
+                </label>
+
+                <pass-word placeholder="请输入密码" password="inputData.password" error="密码格式不正确"></pass-word>
+
+                <pass-word placeholder="请再一次输入密码" password="inputData.repeatPassword" validate="inputData.password" error="重复密码不正确"></pass-word>
+                <p class="service-tips">
+
+                    密码仅支持6~16位数字、字母、或数字与字母组合。字母区分大小写</p>
+                <button type="submit" class="assertive-btn register-btn" ng-disabled="form.$invalid">提交注册</button>
+                <p class="service-tel align-center"><a href="#/tab/registeragreement">提交注册即视为同意<b class="assertive">《用户注册协议》</b></a>
+                </p>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

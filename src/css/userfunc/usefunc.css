@@ -1,0 +1,15 @@
+.about-us {
+  padding-top: 52px;
+  text-align: center; }
+  .about-us img {
+    width: 72px; }
+  .about-us p {
+    font-size: 13px;
+    color: #666; }
+
+.concat-type {
+  width: 100%;
+  line-hieght: 40px; }
+  .concat-type a {
+    font-size: 13px;
+    color: #999; }

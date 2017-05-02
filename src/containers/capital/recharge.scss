@@ -1,0 +1,164 @@
+@import '../../css/public.scss';
+
+
+// 充值 begin
+.recharge{
+  padding-bottom: 52px;
+  .re-count{
+    color: #333;
+    font-size: 19px;
+  }
+  .re-amount{
+    font-size: 19px;
+  }
+  .col{
+    padding: 10px 0;
+    border: 1px solid $red;
+    margin-bottom: 20px;
+    color: $red;
+    font-size: 17px;
+    border-radius: 8px;
+    text-align: center;
+    &.active{
+      background: $red;
+      color: #fff;
+    }
+    &:nth-of-type(2){
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+  .item-input{
+    padding: 8px 0;
+    border-radius: 4px;
+    input{
+      text-align: center;
+      font-size: 17px;
+
+    }
+  }
+
+  .item-box{
+    img{
+      vertical-align: middle;
+    }
+  }
+  .service-tips{
+    margin: 10px 0 25px;
+  }
+
+}
+
+.recharge-sub{
+  height: 52px;
+  padding: 0;
+  background: #f4f4f4;
+  .item-box-flex-1{
+    padding-top: 8px;
+    margin-left: 10px;
+  }
+  .assertive-btn{
+    width: auto;
+    height: 52px;
+    padding: 0 25px;
+
+    border-radius: 0;
+    font-size: 19px;
+  }
+  .re-cash{
+    font-size: 15px;
+    color: #666;
+    .c-red{
+      font-size: 18px;
+    }
+  }
+  .re-fictitfious-cash{
+    font-size: 12px;
+    color: #666
+
+  }
+}
+.icon-noselect{
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/usercenter/ic_noselect.png);
+}
+.icon-selected{
+  @extend .icon-noselect;
+  background-image: url(../img/usercenter/ic_selected.png)!important;
+}
+
+
+
+
+// 充值 end
+
+// 充值详情 begin
+.recharge-detail{
+  padding:115px 0 34px;
+  margin-top: 60px;
+  min-height: 200px;
+  background-color: #fff;
+  position: relative;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  box-shadow: 0 0px 2px rgba(0,0,0,.1);
+  .re-bloack{
+    padding: 0 20px;
+    border-bottom: 1px solid #ddd;
+    .re-item{
+        padding: 15px 0;
+        border-top: 1px solid #ddd;
+        font-size: 15px;
+        color: #333;
+        span{
+          display: inline-block;
+          width: 110px;
+          color: #999;
+        }
+        p{
+          margin-bottom: 15px;
+          white-space: nowrap;
+          &:last-child{
+            margin:0;
+          }
+        }
+      &:first-child{
+        border: none;
+      }
+    }
+  }
+}
+.re-hader{
+  width: 100%;
+  position: absolute;
+  top: -50px;
+  text-align: center;
+  h5{
+    margin-top: 6px;
+    color: #333;
+    font-size: 16px;
+  }
+  img{
+    width: 100px;
+    vertical-align: middle;
+  }
+
+}
+.re-bottom-border{
+  width: 100%;
+  height: 6px;
+  background-image: url('../img/usercenter/recharge-detail-border.png');
+  background-repeat: repeat-x;
+  background-size: 13px 6px;
+  background-position: bottom;
+  position: absolute;
+  bottom: -5px;
+}
+.re-d-tel{
+  color: #666;
+  padding: 30px;
+  font-size: 14px;
+  text-align: center;
+}
+// 充值详情 end

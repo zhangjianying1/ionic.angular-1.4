@@ -1,0 +1,64 @@
+<ion-view title="消息公告">
+    <ion-content class="bg-f4 found" overflow-scroll="true" has-bouncing="true">
+
+        <slide-tabs index="default.index" is-header-bor={{true}} >
+            <slide-tab title="公告" >
+                <dorp-down fn="selfNotice.doRefresh()" >
+                    <div class="info-list">
+                        <div class="list">
+                            <a class="notice item-input" ng-repeat="notice in selfNotice.data track by notice.noticeCode" ng-href="#/tab/noticedetail/{{notice.noticeCode}}">
+
+                                <div class="item-img">
+                                </div>
+
+                                <div class="item-msg">
+                                    <div class="item item-icon-right">
+                                        <i class="icon"><time class="t-small">{{notice.createTime}}</time></i>
+                                        {{notice.title}}
+                                    </div>
+                                    <p class="t-small">
+                                        {{notice.summary}}
+                                    </p>
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="nothing" ng-if="!selfNotice.isMore && selfNotice.data.length == 0">
+                            <img src="./img/found/pic_xiaoxi.png" />
+                            <p>还没有收到任何消息哦!</p>
+                        </div>
+                        <ion-infinite-scroll on-infinite="selfNotice.loadMore()" distance="1%" ng-if="selfNotice.isMore" > </ion-infinite-scroll>
+                    </div>
+                </dorp-down>
+            </slide-tab>
+            <slide-tab title="消息" >
+                <dorp-down fn="pushNotice.doRefresh()">
+                    <div class="info-list">
+                        <div class="list">
+                            <a class="notice item-input" ng-repeat="notice in pushNotice.data track by notice.pushNoticeCode" ng-href="#/tab/pushnoticedetail/{{notice.pushNoticeCode}}">
+
+                                <div class="item-img">
+                                </div>
+                                <div class="item-msg">
+                                    <div class="item item-icon-right">
+                                        <i class="icon"><time class="t-small">{{notice.createTime}}</time></i>
+                                        彩米智投
+                                    </div>
+                                    <p class="t-small">
+                                        {{notice.content}}
+                                    </p>
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="nothing" ng-if="!pushNotice.isMore && pushNotice.data.length == 0">
+                            <img src="./img/found/pic_xiaoxi.png" />
+                            <p>还没有收到任何消息哦!</p>
+                        </div>
+                        <ion-infinite-scroll on-infinite="pushNotice.loadMore()" distance="1%" ng-if="pushNotice.isMore"> </ion-infinite-scroll>
+                    </div>
+                </dorp-down>
+            </slide-tab>
+        </slide-tabs>
+    </ion-content>
+</ion-view>

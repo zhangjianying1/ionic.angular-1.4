@@ -1,0 +1,30 @@
+<ion-view view-title="签到">
+    <ion-content overflow-scroll="true" style="overflow:hidden">
+        <div class="sign">
+            <div class="sign-header-bg">
+                <img src="./img/activitys/sign/pic_zhuangshi.png" />
+            </div>
+            <div class="sign-body">
+                <i class="sign-left-top-img"></i>
+                <h3>签到获得优惠券吧</h3>
+                <p class="c-blue">试试手气吧</p>
+                <div class="scrapes">
+                    <div class="scrape-box" ng-repeat="sign in signData.activityPrizeList track by $index" on-tap="signHandle($index)">
+                        <div ng-class="{'active': active == $index}">
+                            <span>{{sign.prizeValue}}米</span>
+                            <img ng-if="!sign.prizeValue" src="./img/activitys/sign/beimian.png" />
+                        </div>
+
+                    </div>
+                </div>
+                <button on-tap="againOnce()" class="assertive-btn" ng-if="count > 0">今天还有 {{count}} 次机会, 再来一次</button>
+                <button disabled="disabled" class="assertive-btn" ng-if="count < 0">活动已经结束了</button>
+                <h4 class="times"  ng-if="!count && signData.activityPrizeList">今天的机会已经用完了</h4>
+            </div>
+            <div class="go-coupon">
+                <a href="#/tab/indexcoupon" class="btn btn-border">去查看我的优惠券</a>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

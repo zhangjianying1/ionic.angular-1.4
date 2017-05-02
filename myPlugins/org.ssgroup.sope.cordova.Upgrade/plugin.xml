@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="org.ssgroup.sope.cordova.Upgrade"
+    version="0.6.1">
+    <name>Upgrade</name>
+    <description>从app store中检查程序版本并提示升级更新</description>
+    <license>MIT</license>
+    <keywords>cordova,app store, upgrade</keywords>
+
+    <engines>
+        <engine name="cordova" version=">=3.5.0" />
+    </engines>
+      <!-- js module-->
+    <js-module src="www/upgrade.js" name="Upgrade">
+        <clobbers target="somai.upgrade" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <!--preference name="appInfoUrl" value="http://itunes.apple.com/cn/lookup?id=284910350"/--> 
+            <!--preference name="appUpgradeUrl" value="http://itunes.apple.com/cn/lookup?id=284910350"/-->
+
+            <feature name="Upgrade">
+                <param name="ios-package" value="CDVUpgrade"/>
+                <param name="onload" value="true" />
+            </feature>   
+        </config-file>
+
+        <!-- Plugin source code -->
+        <header-file src="src/ios/CDVUpgrade.h" />
+        <source-file src="src/ios/CDVUpgrade.m" compiler-flags="-fno-objc-arc"/>
+
+
+
+    </platform>
+
+    <!-- android -->
+</plugin>

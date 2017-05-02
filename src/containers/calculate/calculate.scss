@@ -1,0 +1,327 @@
+/**
+奖金计算器
+*/
+@import '../../css/public.scss';
+.bouns-result{
+  padding: 0 20px 20px;
+  .number-cont{
+    min-height: 30px;
+    em{
+      width: 30px;
+      height: 30px;
+      border: none;
+      line-height: 30px;
+      &.red{
+        background: $red;
+      }
+      &.blue{
+        background: $blue;
+      }
+    }
+  }
+}
+
+.issue-select{
+  padding: 15px 0;
+  box-align: center;
+  align-items: center;
+  img{
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  & > div{
+    flex: 1;
+    box-flex: 1
+  }
+}
+.select{
+  width: 100%;
+  height: 34px;
+  position: relative;
+  overflow: hidden;
+  .select-val{
+    width: 100%;
+    height: 34px;
+    padding-left: 15px;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    background-image: url(../img/calculate/xialaxuanze.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 34px;
+    background-clip:border-box;
+    line-height: 34px;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 2;
+  }
+  .datalist{
+    width: 100%;
+    position: absolute;
+    top:35px;
+    left:0;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.2);
+    overflow: hidden;
+    transition: all .05s ease-in-out;
+    transform: translate3d(0, -200%, 0);
+
+    li{
+      padding: 0 5px;
+      margin-top: -1px;
+      &.active{
+        background: rgba(0,0,0,.05);
+      }
+      span{
+        display: block;
+        padding:0 0 0 15px;
+        line-height: 33px;
+        color: #333;
+        border-top: 1px solid #ddd;
+      }
+    }
+  }
+}
+.select-number{
+  background: #f4f4f4;
+
+  .number-block{
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+    dl{
+      padding: 0 calculateSize(20px);
+    }
+  }
+  .number-title{
+    padding: 16px 0;
+    font-weight: 300;
+    em{
+      font-size: 17px;
+      padding-right: 14px;
+    }
+  }
+
+}
+.number-cont{
+  overflow: hidden;
+  margin: calculateSize(-5px);
+  .red-ball{
+    em{
+      color: $red;
+      &.active{
+        background: $red;
+        color: #fff!important;
+        border: none;
+      }
+    }
+  }
+  .blue-ball{
+    em{
+      color: $blue;
+      &.active{
+        background: $blue;
+        color: #fff!important;
+        border: none;
+      }
+    }
+  }
+  em{
+    width: calculateSize(33px);
+    height: calculateSize(33px);
+    margin: calculateSize(5px);
+    line-height: .44rem;
+    text-align: center;
+    background: #fff;
+    border-radius: 100%;
+    border: 1px solid #bbb;
+    font-size: 16px;
+    float: left;
+    color: #fff;
+  }
+}
+.number-controll{
+  height: 58px;
+  padding: 0 20px;
+  box-align: center;
+  box-pack: justify;
+  justify-content: space-between;
+  align-items: center;
+}
+.checkbox-btn{
+  .icon-arc{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+
+    border-radius: 50%;
+    vertical-align: -4px;
+  }
+  .icon-selected{
+    border: none;
+  }
+}
+.delete-btn{
+  .icon-delete{
+    width: 29px;
+    height: 29px;
+    margin-right: 7px;
+    background-image: url(../img/calculate/delete.png);
+    vertical-align: -10px;
+  }
+}
+.claculate-cont{
+  width: 135px;
+  padding: 35px 0 0;
+  margin: 0 auto;
+  overflow: hidden;
+  .assertive-btn{
+    width: 135px;
+    height: 40px;
+    margin-bottom: 33px;
+    font-size: 16px;
+    border-radius: 5px;
+    &[disabled]{
+      background: #ccc;
+    }
+  }
+  .share-cont{
+    width: 135px;
+    padding: 0 0 18px;
+    box-pack: justify;
+    justify-content: space-between;
+    img{
+      width: 40px;
+      height: 40px;
+
+    }
+  }
+}
+
+/*
+  算奖结果
+*/
+.modal-backdrop{
+  background: rgba(0,0,0,.5);
+}
+
+.popup-template{
+  width: calculateSize(325px);
+  margin: auto;
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .header{
+    height: 44px;
+    padding: 0 15px;
+    background: $red;
+    position: relative;
+    h2{
+      font-size: 17px;
+      color: #fff;
+      line-height: 44px;
+      flex: 1;
+      box-flex:1;
+    }
+    .close{
+      position: absolute;
+      width: 30px;
+      font-size: 38px;
+      color: #fff;
+      top: 4px;
+      right: 0;
+    }
+  }
+  .show-result{
+    dl{
+      margin:0;
+    }
+    .column-box{
+      padding: 15px;
+      pack-align: center;
+      align-items: center;
+      color: #333;
+      font-weight: 300;
+      img{
+        width: 25px;
+        height: 25px;
+      }
+      h2{
+
+        margin:0 10px 0 11px;
+        font-size:17px;
+        color: #333;
+        font-weight: 100;
+      }
+    }
+    .show-number{
+      div{
+        padding: 2.5px 15px;
+        color: #333;
+      }
+    }
+    .prize{
+      dt{
+        padding: 14px 15px 5px;
+        color: #333;
+        font-weight: 300;
+      }
+      .prize-list{
+        li{
+          display: box;
+          display: flex;
+          background: #f4f4f4;
+          &:first-child{
+            span{
+              color: #333;
+            }
+          }
+          &:nth-of-type(even){
+            background: #fff;
+          }
+          span{
+            display: block;
+            width: 100%;
+            box-flex: 1;
+            flex: 1;
+            border-left: 1px solid #ddd;
+            text-align: center;
+            line-height: 25px;
+            flex-box: 1;
+            flex: 1;
+            font-size: 13px;
+            white-space: nowrap;
+            &:first-child{
+              border: none;
+            }
+          }
+        }
+      }
+    }
+    .show-prize-cash{
+      padding: 17px;
+      text-align: center;
+      color: #333;
+      .icon-trophy{
+        width: 18px;
+        height: 20px;
+        margin-right: 5px;
+        vertical-align: -5px;
+        background-image: url(../img/calculate/win.png);
+      }
+    }
+  }
+  footer{
+    padding: 10px 0 20px;
+    text-align: center;
+  }
+}

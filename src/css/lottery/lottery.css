@@ -1,0 +1,139 @@
+.lottery-num {
+  width: 100%; }
+  .lottery-num em, .lottery-num .lottery .lottery-name .item-note, .lottery .lottery-name .lottery-num .item-note {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    border-radius: 25px;
+    background: #ff3939;
+    text-align: center;
+    line-height: 24px;
+    color: #fff; }
+    .lottery-num em.font-blue, .lottery-num .lottery .lottery-name .font-blue.item-note, .lottery .lottery-name .lottery-num .font-blue.item-note {
+      background: #167CE8; }
+
+.active-show .item-note {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
+.active-show .lottery-bonus {
+  display: block; }
+
+.soon-bonus {
+  width: 100%;
+  font-size: 12px; }
+  .soon-bonus span {
+    padding-right: 5px;
+    font-size: 16px;
+    color: #167CE8; }
+
+.lottery .item {
+  padding: 16px 15px; }
+
+.lottery .lottery-img {
+  -ms-flex-item-align: start;
+  align-self: flex-start; }
+
+.lottery .lottery-name {
+  width: 100%;
+  margin-bottom: 14px;
+  font-size: 16px;
+  color: #333; }
+  .lottery .lottery-name em, .lottery .lottery-name .item-note {
+    padding-left: 6px;
+    font-size: 12px;
+    color: #999;
+    vertical-align: 1px; }
+  .lottery .lottery-name .item-note {
+    padding-right: 8px; }
+
+.lottery .lottery-img {
+  width: 40px !important;
+  height: 40px !important; }
+
+.lottery .lottery-issue {
+  padding: 0 0 0 10px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  box-flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-orient: vertical; }
+
+.icon-calculate {
+  width: 40px;
+  height: 40px;
+  margin-top: -3px;
+  background-image: url(../img/lottery/ic-jiangjinjisuan.png); }
+
+.lottery-list .item-note {
+  position: absolute;
+  top: 30px;
+  right: 15px;
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
+  -webkit-transform-origin: 29% 39%;
+  transform-origin: 29% 39%; }
+  .lottery-list .item-note.rodate90 {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg); }
+
+.lottery-list .item {
+  padding: 16px 0; }
+  .lottery-list .item.activated {
+    background: none; }
+
+.lottery-list-box {
+  width: 100%;
+  padding: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .lottery-list-box .lottery-issue {
+    padding-left: 15px;
+    width: 100%; }
+  .lottery-list-box .lottery-issue-time {
+    margin-bottom: 12px; }
+    .lottery-list-box .lottery-issue-time em, .lottery-list-box .lottery-issue-time .lottery .lottery-name .item-note, .lottery .lottery-name .lottery-list-box .lottery-issue-time .item-note {
+      padding-right: 6px;
+      font-size: 16px;
+      color: #333; }
+
+.lottery-bonus {
+  display: none;
+  width: 100%;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #666; }
+  .lottery-bonus .item-input {
+    padding: 0; }
+    .lottery-bonus .item-input div {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      box-flex: 1;
+      text-align: center; }
+  .lottery-bonus dl {
+    margin: 0; }
+  .lottery-bonus .bonus-header {
+    padding: 8px 0;
+    background: #eee; }
+  .lottery-bonus .bonus-full {
+    padding: 8px 0;
+    font-size: 14px; }
+  .lottery-bonus .bouns-msg {
+    padding: 3px 0; }
+
+.lottery-dice {
+  padding: 0;
+  font-size: 14px;
+  color: #333; }
+  .lottery-dice img {
+    width: 25px;
+    margin-right: 8px;
+    vertical-align: middle; }

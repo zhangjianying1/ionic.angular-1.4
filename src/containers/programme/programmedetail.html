@@ -1,0 +1,44 @@
+<ion-view view-title="方案订购">
+    <ion-content>
+        <div class="programme-detail">
+            <div class="lottery-icon">
+                <img ng-src="./img/lottery/{{programme.lotteryCode}}.png" />
+                <h6 class="lottery-name">第{{programme.issue}}期</h6>
+            </div>
+            <dl class="recommend-hot-number">
+                <dt>{{programme.remark}}</dt>
+                <dd class="lottery-type">
+                    {{programme.tips}}
+                    <div class="lottery-num child-margin30">
+                        <em ng-repeat="bonusNumber in programme.number.split(',') track by $index" ng-class="{'font-blue': programme.lotteryCode == '001' || programme.lotteryCode == '113'}" >{{programme.isBuy ? bonusNumber : '?'}}</em>
+                    </div>
+                    <div>号码将在您购买后显示</div>
+                </dd>
+            </dl>
+            <div class="list price-list">
+                <a class="item" href="">
+                    方案佣金
+                    <span class="item-note">
+                      {{programme.rewardAmount}} 米币
+                    </span>
+                </a>
+                <a class="item " ng-href="#/tab/usecoupon/{{programme.lotteryCode}}/{{programme.rewardAmount}}/{{programme.programCode}}">
+                    优惠券 <span class="c-red" ng-if="account.couponNum"> {{account.couponNum}}张可用</span>
+                    <span class="item-note">
+                      {{(programme.couponAmount ? - programme.couponAmount + ' 米币' : account.couponNum ? '未使用':'无可用')}}<i class="icon ion-ios-arrow-forward"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+    <div class="bar bar-footer programme-buy">
+        <div class="item-box-flex-1">
+            <div>
+                <div class="re-cash">应支付: <span class="c-red" >{{programme.payCount | number}}</span>米币</div>
+                <div class="re-fictitious-cash">(当前账户余额：{{account.mcoin | number}}米币)</div>
+                <div class="c-red" ng-if="account.mcoin < programme.payCount">余额不足，请及时充值</div>
+            </div>
+        </div>
+        <button ng-click="buySubmit(account.mcoin < programme.payCount)" class="assertive-btn">{{(account.mcoin < programme.payCount ? '充值': '提交')}}</button>
+    </div>
+</ion-view>

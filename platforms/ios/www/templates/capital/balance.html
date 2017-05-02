@@ -1,0 +1,79 @@
+<ion-view view-title="我的余额">
+    <ion-content class="balance-cont" overflow-scroll="true" style="overflow:hidden">
+        <div class="">
+            <div class="show-balance">
+                <h3 class="balance-tit">账户余额</h3>
+                <div class="balance-cash">
+                    {{mcoin | number}}<span class="fs-14">米币</span>
+                </div>
+                <div class="balance-prompt">仅可购买彩米平台上虚拟产品或服务</div>
+            </div>
+            <div>
+                <a href="#/tab/recharge" class="row transaction">
+                    <div class="col">
+                        <i class="icon-recharge"></i>
+                        充值
+                    </div>
+                </a>
+            </div>
+            <div class="balance-info">
+                <slide-tabs index="default.index" is-header-bor={{true}}>
+                    <slide-tab title="全部" >
+                      <dorp-down fn="doRefreshAll()">
+                          <div class="info-list">
+                              <a href="" ng-repeat="data in all.data">
+                                  <div class="row" >
+                                      <div class="col">
+                                          <h4>{{data.desc}}</h4>
+                                          <time>{{data.createTime}}</time>
+                                      </div>
+                                      <div class="col text-center">
+                                          <h4 class="c-999">余额</h4>
+                                          <em>{{data.mcoinNew | number}} 米币</em>
+                                      </div>
+                                      <div class="col cash-num text-right">
+                                          <em ng-class="{'c-red': data.mcoin > 0}">{{(data.mcoin > 0 ? '+' : '')}}{{data.mcoin | number}}米币</em>
+                                      </div>
+                                  </div>
+                              </a>
+                              <div class="nothing" ng-if="!all.isMore && all.data.length == 0">
+                                  <img src="./img/usercenter/ic_mingxi.png" />
+                                  <p>您还没有相关明细哦!</p>
+                              </div>
+                              <ion-infinite-scroll on-infinite="loadAll()" distance="1%" ng-if="all.isMore" > </ion-infinite-scroll>
+                          </div>
+                      </dorp-down>
+                    </slide-tab>
+                    <slide-tab title="充值">
+                        <dorp-down fn="doRefreshRecharge()">
+                            <div class="info-list">
+                                <a ng-href="{{data.status == 2 ? '#/tab/rechargedetail/' + data.orderId : '' }}" ng-repeat="data in recharge.data">
+
+                                    <div class="row" >
+                                        <div class="col">
+                                            <h4>{{data.fillResourcesDesc}}</h4>
+                                            <time>{{data.createTime | dateshort}}</time>
+                                        </div>
+                                        <div class="col text-center">
+                                            <h4 class="c-999" ng-class="{'c-red': data.statusDesc == '失败', 'c-yellow': data.statusDesc == '处理中'}">{{data.statusDesc}}</h4>
+                                            <em>+ {{data.mcoin | number}} 米币</em>
+                                        </div>
+                                        <div class="col cash-num text-right">
+                                            <em class="c-red">{{data.amount | currency: '' }}元</em>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="nothing" ng-if="!recharge.isMore && recharge.data.length == 0">
+                                    <img src="./img/usercenter/ic_mingxi.png" />
+                                    <p>您还没有相关的充值哦!</p>
+                                </div>
+                                <ion-infinite-scroll on-infinite="loadRecharge()" distance="1%" ng-if="recharge.isMore"> </ion-infinite-scroll>
+                            </div>
+                        </dorp-down>
+                    </slide-tab>
+                </slide-tabs>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

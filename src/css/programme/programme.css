@@ -1,0 +1,283 @@
+.c-row {
+  padding: 15px 20px;
+  color: #333;
+  background: #fff; }
+  .c-row .col {
+    padding: 0; }
+  .c-row .col:first-child {
+    width: 60px;
+    margin-right: 15px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 60px;
+    flex: 0 0 60px; }
+    .c-row .col:first-child img {
+      width: 60px;
+      height: 60px; }
+  .c-row .col:last-child {
+    width: auto;
+    text-align: right;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto; }
+
+.child-margin30 em {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 30px;
+  margin: 0 7px; }
+
+.nothing {
+  padding: 50px;
+  text-align: center; }
+  .nothing img {
+    width: 118px; }
+
+.programme-list .item {
+  height: 115px;
+  padding: 0 20px;
+  border: none; }
+  .programme-list .item .sign {
+    width: 115px;
+    height: 60px;
+    background: #48D2A0;
+    position: absolute;
+    top: -24px;
+    right: -51px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    color: #fff;
+    font-size: 12px;
+    line-height: 94px;
+    text-align: center; }
+
+.programme-list .c-row {
+  display: box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  color: #333;
+  background: #fff; }
+
+.programme-list .lottery-icon {
+  width: 60px;
+  -webkit-box-flex: 0;
+  box-flex: 0;
+  -ms-flex: auto 60px;
+  flex: auto 60px;
+  text-align: center; }
+  .programme-list .lottery-icon .lottery-name {
+    font-size: 14px;
+    text-align: center; }
+  .programme-list .lottery-icon img {
+    width: 60px;
+    height: 60px; }
+
+.programme-list .lottery-issue {
+  box-flex: 1;
+  -webkit-box-flex: 1;
+  -ms-flex: auto 100;
+  flex: auto 100;
+  padding-left: 10px;
+  font-size: 16px;
+  text-align: left; }
+  .programme-list .lottery-issue .type {
+    padding-top: 9px; }
+  .programme-list .lottery-issue .end-time {
+    padding-top: 14px;
+    font-size: 14px;
+    color: #999; }
+
+.programme-list .sell {
+  width: 90px;
+  text-align: right; }
+  .programme-list .sell .number {
+    padding-top: 30px;
+    height: 56px; }
+    .programme-list .sell .number em {
+      margin: 0 0 0 2.5px; }
+  .programme-list .sell .price {
+    padding-top: 7px;
+    font-size: 14px; }
+
+.programme-detail .lottery-icon {
+  padding: 25px 0 20px;
+  text-align: center; }
+  .programme-detail .lottery-icon img {
+    width: 60px;
+    vertical-align: middle; }
+  .programme-detail .lottery-icon h6 {
+    font-size: 14px;
+    color: #333; }
+
+.recommend-hot-number {
+  padding: 10px 20px;
+  border-top: 1px solid #ddd;
+  margin-bottom: 0;
+  background: #f4f4f4; }
+  .recommend-hot-number dt {
+    font-size: 14px;
+    color: #666;
+    font-weight: normal; }
+  .recommend-hot-number .lottery-type {
+    padding: 10px 0 0;
+    text-align: center;
+    font-size: 16px;
+    color: #333; }
+    .recommend-hot-number .lottery-type .lottery-num {
+      padding: 15px 0 10px; }
+
+.price-list {
+  padding: 0 20px;
+  border-top: 1px solid #ddd;
+  font-size: 16px;
+  color: #666; }
+  .price-list .item {
+    padding: 14px 26px 14px 0;
+    border-left: none;
+    border-right: none; }
+    .price-list .item .c-red {
+      font-size: 14px;
+      color: #ff3939; }
+    .price-list .item .item-note i {
+      position: absolute;
+      -webkit-transform: translate(18px);
+      transform: translate(18px);
+      font-size: 22px; }
+
+.programme-buy {
+  height: 68px;
+  padding: 0;
+  background: #f4f4f4; }
+  .programme-buy .item-box-flex-1 {
+    display: box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    box-pack: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0;
+    padding-left: 20px;
+    border-top: 1px solid #ddd; }
+  .programme-buy .re-cash {
+    font-size: 15px;
+    color: #666; }
+    .programme-buy .re-cash .c-red {
+      font-size: 19px; }
+  .programme-buy .re-fictitious-cash {
+    padding-top: 2px;
+    color: #646464; }
+  .programme-buy .assertive-btn {
+    width: 130px;
+    height: 68px;
+    border-radius: 0;
+    font-size: 19px; }
+
+.programme-success {
+  padding: 19px 0 0;
+  text-align: center;
+  position: relative;
+  top: -32px;
+  background: #fff; }
+  .programme-success img {
+    width: 44px;
+    vertical-align: middle; }
+  .programme-success p {
+    padding-top: 15px;
+    margin: 0;
+    font-size: 15px;
+    color: #333; }
+
+.use-coupon .coupon-box {
+  height: 103px;
+  box-pack: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .use-coupon .coupon-box .coupon-des, .use-coupon .coupon-box .coupon-term {
+    display: box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    box-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 0; }
+  .use-coupon .coupon-box .icon-use {
+    width: 43px;
+    height: 43px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url(../img/programme/weixuanzhong.png);
+    background-size: cover; }
+    .use-coupon .coupon-box .icon-use.active {
+      background-image: url(../img/programme/xuanzhong.png); }
+
+.use-coupon-assertive {
+  height: 50px;
+  padding: 0; }
+  .use-coupon-assertive .assertive-btn {
+    width: 100%;
+    border-radius: 0;
+    font-size: 19px;
+    color: #fff; }
+
+.programme-order {
+  background: #f4f4f4; }
+  .programme-order .c-row .col {
+    display: box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    box-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+
+.orderDetail-order-list {
+  padding: 0 20px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #666;
+  background: #fff; }
+  .orderDetail-order-list .item {
+    padding: 9px 0 9px;
+    border-left: none;
+    border-right: none; }
+    .orderDetail-order-list .item .item-note {
+      font-size: 15px;
+      color: #333; }
+
+.dl-box {
+  padding: 0 20px;
+  background: #fff; }
+  .dl-box .header {
+    line-height: 39px;
+    font-size: 15px;
+    color: #333; }
+  .dl-box .body {
+    padding: 6px 0 9px;
+    border-top: 1px solid #ddd; }
+    .dl-box .body .item {
+      padding: 4px 0;
+      font-size: 14px;
+      color: #666;
+      border: none; }
+      .dl-box .body .item .item-note {
+        color: #666; }

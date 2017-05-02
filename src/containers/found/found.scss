@@ -1,0 +1,180 @@
+@import '../../css/public.scss';
+.t-small{
+  font-size:13px;
+  color: #999!important;
+}
+// 发现 begin
+.found{
+  .item{
+    padding: 15px;
+  }
+  .found-img{
+    width: 70px;
+    img{
+      width: 70px;
+    }
+  }
+  .found-tit-box{
+    padding-left: 10px;
+    flex: 1;
+    box-flex:1;
+    h3{
+      padding-bottom: 10px;
+      font-size: 17px;
+      font-weight: normal;
+      color: #333;
+    }
+    .fount-tit{
+      font-size: 13px;
+      color: #999;
+
+    }
+  }
+
+}
+// 发现 end
+
+// 咨询 begin
+.consult{
+  padding: 15px;
+  margin-top: 10px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.23);
+  .consult-img{
+    width: 125px;
+    padding: 0;
+    flex: 0 auto;
+    img{
+      width: 125px;
+      height: 100px;
+      vertical-align: middle;
+    }
+  }
+  .consult-msg{
+    padding: 0 0 0 10px;
+    h2{
+      font-size: 15px;
+      color: #333;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    p{
+      height: 37px;
+      margin: 12px 0 0;
+      font-size: 13px;
+      color: #999;
+      -webkit-line-clamp:2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+
+  }
+  .publish-time{
+    padding-top: 14px;
+
+    .tag{
+      display: inline-block;
+      height: 20px;
+      padding: 0 5px;
+      line-height: 20px;
+      background: $blue;
+      border-radius: 14px;
+      color: #fff;
+      font-size: 12px;
+    }
+    time{
+      font-size:13px;
+      color: #666;
+    }
+
+  }
+
+}
+.consult-detail{
+  padding: 15px;
+  dt{
+    font-size: 19px;
+    color: #333;
+  }
+  img{
+    width: 100%;
+    height: auto;
+  }
+  .source{
+    padding: 8px 0;
+    color: #666;
+    font-size: 13px;
+    .item-note{
+      font-size: 13px;
+      color: #666;
+    }
+  }
+}
+.item-list .row + .row{
+  padding: 15px;
+  margin-top: 10px;
+}
+// 咨询 end
+
+// 消息 begin
+.notice{
+  padding: 20px 15px 4px;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  box-align: start;
+  align-items: flex-start;
+  .item-img{
+    width: 38px;
+    height: 38px;
+    background-image: url(../img/found/ic_gonggao.png);
+    broder-radius: 38px;
+    background-size: cover;
+    img{
+      width: 38px;
+    }
+  }
+
+  .item-msg{
+    min-height: 40px;
+    flex: 1;
+    box-flex: 1;
+    padding-left: 15px;
+    p{
+      display: -webkit-box;
+      display: -moz-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-all;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp:3;
+    }
+  }
+  .item{
+    padding: 0 0 6px;
+    border: none;
+    font-size: 17px;
+    color: #333;
+  }
+}
+@media (device-height:480px) and (-webkit-min-device-pixel-ratio:2){
+  .found .lottery-num em{
+    width: 22px;
+    height: 22px;
+    line-height: 20px;
+    font-size: 11px;
+  }
+
+}
+
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){
+  .found .lottery-num em{
+    width: 22px;
+    height: 22px;
+    line-height: 20px;
+    font-size: 11px;
+  }
+
+}
+// 消息 end

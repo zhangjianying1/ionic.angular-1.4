@@ -1,0 +1,41 @@
+<ion-view view-title="我的方案订单">
+    <ion-content class="order-list">
+        <ion-refresher
+                pulling-text="下拉刷新..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
+        <div class="order-title">
+            全部订单
+        </div>
+        <div class="nothing" ng-if="!isMore && !orders.length">
+            <img src="./img/usercenter/wudingdan.png" />
+            <p>您还没有购买订单哦！</p>
+
+        </div>
+        <div>
+            <div ng-repeat="order in orders">
+                <a ng-href="#/tab/orderdetail/{{order.orderCode}}" class="row c-row">
+                    <div class="col">
+                        <img ng-src="./img/lottery/{{order.lotteryCode}}.png" style="width: 40px; height: 40px"/>
+                    </div>
+                    <div class="col">
+                        <div>
+                            <div class="lottery-name">{{order.lotteryName}} {{order.remark}}</div>
+                            <time class="bonus-time">{{order.endTime}}</time>
+                        </div>
+                    </div>
+                    <div class="col c-999 fs-15 box-center">
+                        {{order.rewardAmount}} 米币
+                    </div>
+                    <div class="col">
+                        {{order.programStatusDesc}}
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <ion-infinite-scroll on-infinite="loadMore()" distance="1%" ng-if="isMore" > </ion-infinite-scroll>
+
+    </ion-content>
+</ion-view>

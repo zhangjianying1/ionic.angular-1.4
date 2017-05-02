@@ -1,0 +1,9 @@
+$red: #ff3939;
+$blue: #167CE8;
+$old: 75px;
+
+
+
+@function calculateSize($px) {
+  @return $px/$old * 1rem;
+}

@@ -1,0 +1,71 @@
+<ion-view view-title="{{bonusTitle}}走势图">
+    <ion-content overflow-scroll="true">
+
+        <div class="bonus-3d bonus-trend" >
+            <tabs index="default.index" is-header-bor="true" >
+                <tab title="直选"  class="full-screen">
+                    <div class="trend-column" >
+                        <div class="column-header column-row select-num" style="height:35px">
+                            <div>
+                              <div class="column-left-first">
+                                期号
+                              </div>
+                            </div>
+
+                            <div class="select-num-box">
+                                <div class="bg-fdd9d9">
+                                    <select-picker picker="['百位','十位', '个位']" picker-val="default.pickerVal"/>
+                                </div>
+                                <section>
+                                  <issue issue-data="[0,1,2,3,4,5,6,7,8,9]" />
+                                </section>
+                             </div>
+                        </div>
+
+                        <bonus-full style="padding-top: 34px" sign="def{{default.pickerVal+1}}"  issue-list="issueList" sign-cache="default.signHC" ng-if="issueList.length"></bonus-full>
+
+                    </div>
+                </tab>
+
+                <tab title="组选"  class="full-screen">
+                    <div class="trend-column">
+                        <div class="column-header column-row">
+                            <div>
+                              <div class="column-left-first">
+                                期号
+                              </div>
+                            </div>
+                            <section class="column-left-other">
+                              <issue issue-data="[0,1,2,3,4,5,6,7,8,9]" />
+                            </section>
+                        </div>
+
+                        <bonus-full sign="zx" issue-list="issueList"  ng-if="issueList.length" ></bonus-full>
+
+                    </div>
+                </tab>
+                <tab title="和值">
+
+                    <div class="trend-column">
+                        <div class="column-header column-row">
+                            <div>
+                                <div class="column-left-first">
+                                    期号
+                                </div>
+                            </div>
+                            <section class="column-left-other" >
+                              <issue issue-data="[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,27,28]" />
+                            </section>
+                        </div>
+                        <bonus-full sign="sum" issue-list="issueList"  ng-if="issueList.length" ></bonus-full>
+                    </div>
+                </tab>
+                </slide-tab>
+            </tabs>
+          <scroll-load ng-if="isMore" on-infinite="loadMore()" />
+        </div>
+        <show-more ng-class="{'full-screen': default.index == 0 || default.index == 1}"  sign-arr="[['def1', 'def2', 'def3'], 'zx', 'sum']" index="default.index" picker-val="default.pickerVal"></show-more>
+
+    </ion-content>
+
+</ion-view>

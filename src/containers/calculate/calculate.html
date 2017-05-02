@@ -1,0 +1,48 @@
+<ion-view view-title="{{default.lotteryName}}奖金计算器">
+  <set-time-out-load-img overflow-scroll="false" has-bouncing="true">
+
+    <section class="bouns-result">
+      <div class="column-box issue-select">
+        <img src="./img/lottery/{{default.lotteryCode}}.png" />
+        <div>
+          <select-val value="default.lotteryIssue" datas="lastIssue" ng-if="lastIssue.length"></select-val>
+        </div>
+      </div>
+
+      <div class="number-cont">
+        <em ng-repeat="bonusNumber in default.bonusNumber track by $index" class="red" ng-class="{'blue': bonusNumber.blueBool}">{{bonusNumber.blueBool ? bonusNumber.blueBool : bonusNumber }}</em>
+      </div>
+    </section>
+    <section class="select-number">
+      <div class="number-block">
+        <dl>
+          <dt class="number-title"><em class="c-red">{{default.lotteryCode == '001' ? '红球' : '前区'}}</em> <span>至少选择{{redBall.minSize}}个</span></dt>
+          <dd class="number-cont">
+            <picker-ball value="redBall" class="red-ball"></picker-ball>
+          </dd>
+        </dl>
+      </div>
+      <div class="number-block">
+        <dl>
+          <dt class="number-title"><em class="c-blue">{{default.lotteryCode == '001' ? '蓝球' : '后区'}}</em> <span>至少选择{{blueBall.minSize}}个</span></dt>
+          <dd class="number-cont">
+            <picker-ball value="blueBall" class="blue-ball"></picker-ball>
+          </dd>
+        </dl>
+      </div>
+      <div class="column-box number-controll">
+        <check-box value="default.isAdditional" name="追加" ng-if="default.lotteryCode == '113'"></check-box>
+        <delete-btn name="清空" delete-handle="cleanBall()"></delete-btn>
+      </div>
+    </section>
+    <section class="claculate-cont">
+        <button class="btn assertive-btn" on-tap="calculateHandle()"
+                ng-disabled="redBall.number.length < redBall.minSize || blueBall.number.length < blueBall.minSize">计算奖金</button>
+        <div class="column-box share-cont" ng-if="isShowShare">
+          <a ><share value="0" title="{{default.lotteryName}}奖金计算器" direction="" url="http://h5.icaimi.com/index.html#/tab/calculate/{{default.lotteryCode}}"><img _src="./img/calculate/weixin.png" /></share></a>
+          <a><share value="1" title="{{default.lotteryName}}奖金计算器" direction="" url="http://h5.icaimi.com/index.html#/tab/calculate/{{default.lotteryCode}}"><img _src="./img/calculate/pengyouquan.png" /></share></a>
+        </div>
+
+    </section>
+  </set-time-out-load-img>
+</ion-view>

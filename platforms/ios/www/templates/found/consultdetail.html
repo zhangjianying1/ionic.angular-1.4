@@ -1,0 +1,12 @@
+<ion-view view-title="公告详情">
+    <ion-content class="found">
+        <dl class="consult-detail" ng-if="consultDetail.sourceType == 0">
+            <dt>{{consultDetail.title}}</dt>
+            <dd class="source">来源：{{consultDetail.externalName}} <span class="item-note">{{consultDetail.createTime}}</span></dd>
+            <dd ng-bind-html="consultDetail.content"></dd>
+
+        </dl>
+        <iframe ng-src="{{consultDetail.externalUrl}}" set-height width="100%" ng-if="consultDetail.sourceType == 1"/>
+
+    </ion-content>
+</ion-view>

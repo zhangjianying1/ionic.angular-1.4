@@ -1,0 +1,58 @@
+<ion-view view-title="充值">
+    <ion-content overflow-scroll="false" >
+
+        <div class="recharge">
+            <div class="padding-20">
+                <h2 class="re-amount">充值数量: <span class="c-red">{{inputData.amount | number}}米币</span></h2>
+                <div class="row">
+                    <div class="col" ng-class="{active: inputData.amount == 1000}" ng-click="selectamountHandle(1000)">1000</div>
+                    <div class="col" ng-class="{active: inputData.amount == 2000}" ng-click="selectamountHandle(2000)">2000</div>
+                    <div class="col" ng-class="{active: inputData.amount == 5000}" ng-click="selectamountHandle(5000)">5000</div>
+                </div>
+                <div class="row">
+                    <div class="col" ng-class="{active: inputData.amount == 10000}" ng-click="selectamountHandle(10000)">1万</div>
+                    <div class="col" ng-class="{active: inputData.amount == 20000}" ng-click="selectamountHandle(20000)">2万</div>
+                    <div class="col" ng-class="{active: inputData.amount == 50000}" ng-click="selectamountHandle(50000)">5万</div>
+
+                </div>
+                <div class="item item-input">
+
+                    <my-input value="inputData.amount" >
+                        <input ng-model="inputData.amount" type="tel" number  placeholder="自定义数量" required />
+                    </my-input>
+                </div>
+                <div >
+                    <p class="service-tips">充值数量不能少于1000米币</p>
+                </div>
+            </div>
+
+            <div class="list">
+                <a class="item item-box" href="" ng-click="selectRechargeTypeHandle('alipayWap')">
+                    <img class="user-photo" src="./img/usercenter/zhifubao.png" width="40"/>
+                    <span class="item-box-flex-1">支付宝</span>
+                    <i class="icon icon-noselect" ng-class="{true: 'icon-selected'}[inputData.rechargeType == 'alipayWap']"></i>
+                </a>
+                <a class="item item-box" href="" ng-click="selectRechargeTypeHandle('llfWap')">
+                  <img class="user-photo" src="./img/other-logo/lianlianfu.png" width="40"/>
+                  <span class="item-box-flex-1">连连付</span>
+                  <i class="icon icon-noselect" ng-class="{true: 'icon-selected'}[inputData.rechargeType == 'llfWap']"></i>
+                </a>
+                <!--<a class="item item-box" href="" ng-click="selectRechargeTypeHandle('weixin')">-->
+                    <!--<img class="user-photo" src="./img/usercenter/weixin.png" width="40"/>-->
+                    <!--<span class="item-box-flex-1">微信</span>-->
+                    <!--<i class="icon icon-noselect" ng-class="{true: 'icon-selected'}[inputData.rechargeType == 'weixin']"></i>-->
+                <!--</a>-->
+            </div>
+        </div>
+    </ion-content>
+    <div class="bar bar-footer recharge-sub">
+           <div class="item-box-flex-1">
+               <div class="re-cash">支付金额: <span class="c-red">{{inputData.amount/100 | currency: ' '}}</span>元</div>
+               <div class="re-fictitious-cash">(充值<span class="c-red">{{inputData.amount | number}}米币</span>)</div>
+
+           </div>
+
+           <button ng-click="rechargeSub()" class="assertive-btn" ng-disabled="!inputData.amount ||  inputData.amount < 1000">立即支付</button>
+
+    </div>
+</ion-view>

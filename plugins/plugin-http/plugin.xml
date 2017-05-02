@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="plugin-http" version="0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Http</name>
+    <js-module name="http" src="www/http.js">
+        <clobbers target="http"/>
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="Http">
+                <param name="android-package" value="com.icaimi.cordova.plugin.Http"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/Http.java" target-dir="src/com/icaimi/cordova/plugin/"/>
+        <source-file src="src/android/HttpUtils.java" target-dir="src/com/icaimi/cordova/plugin/"/>
+        <source-file src="src/android/Md5.java" target-dir="src/com/icaimi/cordova/plugin/"/>
+        
+        <source-file src="src/android/lib/okhttputils-2_6_2.jar" target-dir="libs" />
+        <source-file src="src/android/lib/okhttp-3.2.0.jar" target-dir="libs" />
+        <source-file src="src/android/lib/okio-1.8.0.jar" target-dir="libs" />
+        
+    </platform>
+    
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="Http">
+                <param name="ios-package" value="Http"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/Http.h" />
+        <source-file src="src/ios/Http.m" />
+    </platform>
+</plugin>

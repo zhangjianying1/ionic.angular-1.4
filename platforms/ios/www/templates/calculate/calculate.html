@@ -1,0 +1,44 @@
+<ion-view view-title="{{default.lotteryName}}奖金计算器">
+  <set-time-out-load-img overflow-scroll="false" has-bouncing="true">
+    <section class="bouns-result">
+      <div class="column-box issue-select">
+        <img src="./img/lottery/001.png" />
+
+        <select-val value="lastIssue"></select-val>
+      </div>
+
+      <div class="number-cont">
+        <em ng-repeat="bonusNumber in default.bonusNumber track by $index" class="red" ng-class="{'blue': bonusNumber.blueBool}">{{bonusNumber.blueBool ? bonusNumber.blueBool : bonusNumber }}</em>
+      </div>
+    </section>
+    <section class="select-number">
+      <div class="number-block">
+        <dl>
+          <dt class="number-title"><em class="c-red">红球</em> <span>至少选择{{redBall.minSize}}个</span></dt>
+          <dd class="number-cont">
+            <picker-ball value="redBall" class="red-ball"></picker-ball>
+          </dd>
+        </dl>
+      </div>
+      <div class="number-block">
+        <dl>
+          <dt class="number-title"><em class="c-blue">篮球</em> <span>至少选择{{blueBall.minSize}}个</span></dt>
+          <dd class="number-cont">
+            <picker-ball value="blueBall" class="blue-ball"></picker-ball>
+          </dd>
+        </dl>
+      </div>
+      <div class="column-box number-controll">
+        <check-box value="default.isAdditional" name="追加"></check-box>
+        <delete-btn name="清空" delete-handle="cleanBall()"></delete-btn>
+      </div>
+    </section>
+    <section class="claculate-cont">
+        <button class="btn assertive-btn" on-tap="calculateHandle()" ng-disabled="default.redBall.number.length < default.redBall.minSize && default.blueBall.number.length < default.blueBall.minSize">计算奖金</button>
+        <div class="column-box share-cont">
+          <a on-tap="share()"><img _src="./img/calculate/weixin.png" /></a>
+          <a on-tap="share()"><img _src="./img/calculate/pengyouquan.png" /></a>
+        </div>
+    </section>
+  </set-time-out-load-img>
+</ion-view>

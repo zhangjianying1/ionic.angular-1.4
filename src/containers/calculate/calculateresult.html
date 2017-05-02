@@ -1,0 +1,51 @@
+
+<section class="popup-template">
+  <header class="header">
+    <h2>中奖结果</h2>
+    <span class="ion-ios-close-empty close" on-tap="closePopover()"></span>
+  </header>
+  <body>
+  <div class="show-result">
+    <dl class="">
+      <dt class="column-box">
+        <img src="./img/lottery/{{default.lotteryCode}}.png" />
+      <h2>{{data.lotteryName}}</h2>
+      <span>第{{data.issue}}期</span>
+      </dt>
+      <dd class="show-number">
+        <div>开奖号码: <em class="c-red">{{data.bonusNumber[0]}}</em> + <em class="c-blue">{{data.bonusNumber[1]}}</em></div>
+        <div>所选方案: <em class="c-red">{{data.number[0]}}</em> + <em class="c-blue">{{data.number[1]}}</em></div>
+        <div>方案金额: <em class="c-red">{{data.item}}</em> 注 * <em class="c-red">{{data.price}}</em> 元 = <em class="c-red">{{data.amount}}</em>元</div>
+      </dd>
+    </dl>
+    <dl class="prize">
+      <dt>所选方案中奖情况</dt>
+      <dd>
+        <ul class="prize-list">
+          <li>
+            <span>奖项</span>
+            <span>单注奖金(元)</span>
+            <span>命中(注)</span>
+            <span>中奖(元)</span>
+          </li>
+          <li ng-repeat="bonus in data.bonusClass track by $index">
+            <span>{{bonus.name}}</span>
+            <span>{{bonus.amount | number}}</span>
+            <span class="c-red">{{bonus.num}}</span>
+            <span class="c-red">{{bonus.totalAmount | number}}</span>
+          </li>
+
+        </ul>
+      </dd>
+    </dl>
+    <div class="show-prize-cash">
+      <i class="icon icon-trophy"></i>
+      中奖总额: <em class="c-red">{{data.bonusAmount | number}}</em> 元
+    </div>
+  </div>
+  </body>
+  <footer>
+    <em class="c-red">彩米智投</em>提供
+  </footer>
+</section>
+

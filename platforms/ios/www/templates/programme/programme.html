@@ -1,0 +1,49 @@
+<ion-view view-title="今日方案">
+    <ion-content class="bonus-entry" overflow-scroll="false" has-bouncing="true">
+        <ion-refresher
+                pulling-text="下拉刷新..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
+        <div class="nothing" ng-if="!isMore && programmes.length == 0">
+            <img src="./img/usercenter/ic_youhuiquan.png" />
+            <p>还没有推荐方案哦!</p>
+        </div>
+        <div class="off-line" ng-if="isOffLine">
+          网络连接失败,请检查网络!
+        </div>
+        <div class="programme-list" >
+            <a ng-repeat="programme in programmes" ng-href="{{!programme.isBuy ? '#/tab/programmedetail/' + programme.programCode : '#/tab/programmeorder/' + programme.orderCode}}">
+                <ion-item>
+                    <em class="sign" ng-if="programme.isBuy == 1">
+                        已订购
+                    </em>
+                    <div class="c-row">
+                        <div class="c-col lottery-icon">
+                            <img src="./img/lottery/{{programme.lotteryCode}}.png" />
+                            <h6 class="lottery-name">{{programme.lotteryName}}</h6>
+                        </div>
+                        <div class="c-col lottery-issue">
+                            <div class="issue">第{{programme.issue}}期<span class="item-note c-red">{{programme.tips}}</span></div>
+                            <div class="type">
+                                <span>{{programme.remark}}</span>
+                            </div>
+                            <div class="end-time">截止时间：{{programme.endTime}}</div>
+                        </div>
+                        <div class="c-col sell">
+
+                            <div class="number">
+                                <div class="lottery-num">
+                                    <em ng-repeat="bonusNumber in programme.number.split(',') track by $index" ng-class="{'font-blue': programme.lotteryCode == '001' || programme.lotteryCode == '113'}" >{{programme.isBuy ? bonusNumber : '?'}}</em>
+                                </div>
+                            </div>
+                            <div class="price">{{programme.rewardAmount}} 米币</div>
+                        </div>
+                    </div>
+                </ion-item>
+            </a>
+        </div>
+
+
+        <ion-infinite-scroll on-infinite="loadMore()" distance="1%" ng-if="isMore"> </ion-infinite-scroll>
+    </ion-content>
+</ion-view>
